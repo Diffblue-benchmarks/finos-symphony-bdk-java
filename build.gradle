@@ -1,7 +1,9 @@
 plugins {
     id "io.github.gradle-nexus.publish-plugin" version "1.3.0"
     id "org.owasp.dependencycheck" version "9.0.9"
+    id 'info.solidsoft.pitest' version '1.15.0' apply false
 }
+apply plugin: 'info.solidsoft.pitest.aggregator' // to 'pitestReportAggregate' appear
 
 ext.projectVersion = '3.0.0-SNAPSHOT'
 ext.isReleaseVersion = !ext.projectVersion.endsWith('SNAPSHOT')
@@ -9,7 +11,6 @@ ext.isReleaseVersion = !ext.projectVersion.endsWith('SNAPSHOT')
 ext.mavenRepoUrl = project.properties['mavenRepoUrl'] ?: 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
 ext.mavenRepoUsername = project.properties['mavenRepoUsername'] ?: 'Symphony artifactory user'
 ext.mavenRepoPassword = project.properties['mavenRepoPassword'] ?: 'Symphony artifactory password'
-
 ext.pomDefinition = {
     url = 'https://symphony-bdk-java.finos.org'
     licenses {
@@ -33,11 +34,47 @@ ext.pomDefinition = {
     }
 }
 
+repositories {
+    mavenCentral()
+    google()
+}
 allprojects {
     group = 'org.finos.symphony.bdk'
     version = projectVersion
 
     defaultTasks 'build'
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+    if(name !in ['symphony-bdk-bom','symphony-bdk-app-spring-boot-starter','symphony-bdk-core-spring-boot-starter']) {
+        apply plugin: 'java'
+        apply plugin: 'info.solidsoft.pitest'
+
+        pitest {
+            verbose = true
+            junit5PluginVersion = '1.2.2'
+            pitestVersion = '1.15.2'
+            targetClasses = ['com.symphony.*']
+            //Uncomment below to check mutation strength of manual tests
+//            excludedTestClasses = ['com.symphony.*DiffblueTest']
+            //Uncomment below to check mutation strength of diffblue tests
+//            targetTests = ['com.symphony.*DiffblueTest']
+            //Uncomment both to check mutation strength of combined both tests
+            threads = 4
+            exportLineCoverage = true
+            timestampedReports = false
+            outputFormats=['XML','HTML']
+            reportAggregator {
+                outputFormats = ['XML','HTML']
+            }
+            if(project.name in ['symphony-bdk-java','finos-symphony-bdk-java','symphony-bdk-bom','symphony-bdk-examples',
+            'symphony-bdk-extensions','symphony-bdk-extension-api','symphony-bdk-http','symphony-bdk-spring','symphony-bdk-template','symphony-bdk-test']) {
+                failWhenNoMutations = false
+            }
+        }
+    }
 }
 
 nexusPublishing {
@@ -52,12 +89,7 @@ nexusPublishing {
         }
     }
 }
-
-repositories {
-    mavenCentral()
-}
-
 dependencyCheck {
-    failBuildOnCVSS=5
-    suppressionFile="./allow-list.xml"
+    failBuildOnCVSS = 5
+    suppressionFile = "./allow-list.xml"
 }
