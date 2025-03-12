@@ -1,0 +1,110 @@
+package com.symphony.bdk.core.activity.parsing;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import java.util.function.Supplier;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+class MatchingUserIdMentionTokenDiffblueTest {
+  /**
+   * Test getters and setters.
+   * <p>
+   * Methods under test:
+   * <ul>
+   *   <li>{@link MatchingUserIdMentionToken#MatchingUserIdMentionToken(Supplier)}
+   *   <li>{@link MatchingUserIdMentionToken#getTokenType()}
+   * </ul>
+   */
+  @Test
+  @DisplayName("Test getters and setters")
+  @Tag("MaintainedByDiffblue")
+  @MethodsUnderTest({"void MatchingUserIdMentionToken.<init>(Supplier)",
+      "Class MatchingUserIdMentionToken.getTokenType()"})
+  void testGettersAndSetters() {
+    // Arrange and Act
+    Class<?> actualTokenType = (new MatchingUserIdMentionToken(mock(Supplier.class))).getTokenType();
+
+    // Assert
+    Class<Mention> expectedTokenType = Mention.class;
+    assertEquals(expectedTokenType, actualTokenType);
+  }
+
+  /**
+   * Test {@link MatchingUserIdMentionToken#matches(Object)}.
+   * <ul>
+   *   <li>Given {@link Supplier} {@link Supplier#get()} return one.</li>
+   *   <li>Then return {@code true}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link MatchingUserIdMentionToken#matches(Object)}
+   */
+  @Test
+  @DisplayName("Test matches(Object); given Supplier get() return one; then return 'true'")
+  @Tag("MaintainedByDiffblue")
+  @MethodsUnderTest({"boolean MatchingUserIdMentionToken.matches(Object)"})
+  void testMatches_givenSupplierGetReturnOne_thenReturnTrue() {
+    // Arrange
+    Supplier<Long> matchingUserId = mock(Supplier.class);
+    when(matchingUserId.get()).thenReturn(1L);
+    MatchingUserIdMentionToken matchingUserIdMentionToken = new MatchingUserIdMentionToken(matchingUserId);
+
+    // Act
+    boolean actualMatchesResult = matchingUserIdMentionToken.matches(new Mention("Text", 1L));
+
+    // Assert
+    verify(matchingUserId).get();
+    assertTrue(actualMatchesResult);
+  }
+
+  /**
+   * Test {@link MatchingUserIdMentionToken#matches(Object)}.
+   * <ul>
+   *   <li>Given {@link Supplier} {@link Supplier#get()} return zero.</li>
+   *   <li>Then return {@code false}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link MatchingUserIdMentionToken#matches(Object)}
+   */
+  @Test
+  @DisplayName("Test matches(Object); given Supplier get() return zero; then return 'false'")
+  @Tag("MaintainedByDiffblue")
+  @MethodsUnderTest({"boolean MatchingUserIdMentionToken.matches(Object)"})
+  void testMatches_givenSupplierGetReturnZero_thenReturnFalse() {
+    // Arrange
+    Supplier<Long> matchingUserId = mock(Supplier.class);
+    when(matchingUserId.get()).thenReturn(0L);
+    MatchingUserIdMentionToken matchingUserIdMentionToken = new MatchingUserIdMentionToken(matchingUserId);
+
+    // Act
+    boolean actualMatchesResult = matchingUserIdMentionToken.matches(new Mention("Text", 1L));
+
+    // Assert
+    verify(matchingUserId).get();
+    assertFalse(actualMatchesResult);
+  }
+
+  /**
+   * Test {@link MatchingUserIdMentionToken#matches(Object)}.
+   * <ul>
+   *   <li>When {@code Input Token}.</li>
+   *   <li>Then return {@code false}.</li>
+   * </ul>
+   * <p>
+   * Method under test: {@link MatchingUserIdMentionToken#matches(Object)}
+   */
+  @Test
+  @DisplayName("Test matches(Object); when 'Input Token'; then return 'false'")
+  @Tag("MaintainedByDiffblue")
+  @MethodsUnderTest({"boolean MatchingUserIdMentionToken.matches(Object)"})
+  void testMatches_whenInputToken_thenReturnFalse() {
+    // Arrange, Act and Assert
+    assertFalse((new MatchingUserIdMentionToken(mock(Supplier.class))).matches("Input Token"));
+  }
+}
