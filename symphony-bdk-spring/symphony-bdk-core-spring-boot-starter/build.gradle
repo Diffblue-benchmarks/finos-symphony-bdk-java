@@ -30,7 +30,6 @@ dependencies {
     api project(':symphony-bdk-template:symphony-bdk-template-api')
     implementation project(':symphony-bdk-template:symphony-bdk-template-freemarker')
 
-
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
@@ -47,5 +46,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    compileOnly("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.6.0")
 }
 

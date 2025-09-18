@@ -21,4 +21,6 @@ dependencies {
 
     testImplementation 'com.tngtech.archunit:archunit-junit5'
     testImplementation project(':symphony-bdk-test:symphony-bdk-test-spring-boot')
+    compileOnly("com.diffblue.cover:cover-annotations:1.6.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.6.0")
 }
