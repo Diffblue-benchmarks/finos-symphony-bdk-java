@@ -1,0 +1,154 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 179.099,
+    "environmentDetectionTime" : 0.023,
+    "indexingTime" : 0.415,
+    "entryPointsTime" : 0.012,
+    "generationTime" : 2669.842,
+    "timeToFirstTest" : 5225.492,
+    "timeToLastTest" : 4241.837,
+    "indexQueryTime" : 4.142,
+    "verificationTime" : 92.491,
+    "validationTime" : 110.688
+  },
+  "codes" : {
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T012" : "Synthetic method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 1,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 51,
+    "perMethodTestability" : {
+      "T003" : 1,
+      "T005" : 1,
+      "T006" : 1,
+      "T012" : 2,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "T003" : 1,
+      "T005" : 1,
+      "T006" : 1,
+      "T012" : 2,
+      "T023" : 1
+    },
+    "perTestValidation" : {
+      "V000" : 2,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.examples.GroupExtensionExample" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 2,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 2,
+        "T023" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.examples.GroupExtensionExample.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.getGroup:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Ljava/lang/String;)Ljava/util/Optional;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        72,
+        73,
+        74
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.lambda$main$0:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Lcom/symphony/bdk/core/SymphonyBdk;Lcom/symphony/bdk/core/activity/command/CommandContext;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        45,
+        46,
+        47,
+        48,
+        46,
+        49
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.lambda$main$1:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Lcom/symphony/bdk/core/SymphonyBdk;Lcom/symphony/bdk/core/activity/command/CommandContext;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        54,
+        55,
+        57,
+        59,
+        60,
+        61,
+        63,
+        65
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        35,
+        36,
+        37,
+        38,
+        41,
+        44,
+        52,
+        67,
+        68
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

@@ -1,0 +1,361 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 182.554,
+    "environmentDetectionTime" : 0.025,
+    "indexingTime" : 0.424,
+    "entryPointsTime" : 0.015,
+    "generationTime" : 2848.112,
+    "timeToFirstTest" : 5868.561,
+    "timeToLastTest" : 4708.24,
+    "indexQueryTime" : 5.082,
+    "verificationTime" : 99.88,
+    "validationTime" : 111.692
+  },
+  "codes" : {
+    "T003" : "Private method",
+    "T004" : "In anonymous inner class",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T012" : "Synthetic method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 3,
+    "methodsCount" : 18,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 163,
+    "perMethodTestability" : {
+      "T003" : 5,
+      "T004" : 2,
+      "T005" : 2,
+      "T006" : 2,
+      "T012" : 5,
+      "T023" : 2
+    },
+    "perMethodOutcome" : {
+      "T003" : 5,
+      "T004" : 2,
+      "T005" : 2,
+      "T006" : 2,
+      "T012" : 5,
+      "T023" : 2
+    },
+    "perTestValidation" : {
+      "V000" : 16,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.examples.df2.InjectorBot" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 4,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 4,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "T003" : 4,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 4,
+        "T023" : 1
+      }
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 1,
+        "T023" : 1
+      }
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot$1" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T004" : 2
+      },
+      "perMethodOutcome" : {
+        "T004" : 2
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.examples.df2.InjectorBot.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        28
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.checkAllMessagesHaveBeenRepliedTo:(Lcom/symphony/bdk/core/SymphonyBdk;Ljava/time/Instant;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        82,
+        83,
+        85,
+        86
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.checkMessages:(Lcom/symphony/bdk/core/SymphonyBdk;Ljava/util/List;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        115
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.createTestRoom:(Lcom/symphony/bdk/core/SymphonyBdk;Ljava/time/Instant;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.lambda$checkMessages$0:(Lcom/symphony/bdk/core/SymphonyBdk;Lcom/symphony/bdk/gen/api/model/V4Message;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.lambda$checkMessages$1:(Lcom/symphony/bdk/gen/api/model/V4Message;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        93
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.lambda$checkMessages$2:(Ljava/lang/String;Lcom/symphony/bdk/gen/api/model/V4Message;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        102,
+        103,
+        104
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.lambda$checkMessages$3:(Ljava/util/Map$Entry;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        110
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        38,
+        39,
+        40,
+        42,
+        44,
+        45,
+        46,
+        47
+      ]
+    },
+    "com.symphony.bdk.examples.df2.InjectorBot.sendMessages:(Lcom/symphony/bdk/core/SymphonyBdk;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        64,
+        65,
+        66,
+        65,
+        68
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot$1.<init>:(Lcom/hazelcast/map/IMap;Lcom/hazelcast/core/HazelcastInstance;Lcom/symphony/bdk/core/SymphonyBdk;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        53
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot$1.onMessageSent:(Lcom/symphony/bdk/gen/api/model/V4Initiator;Lcom/symphony/bdk/gen/api/model/V4MessageSent;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T004",
+      "perMethodOutcome" : "T004",
+      "lineNumbers" : [
+        57,
+        59,
+        63,
+        64,
+        67,
+        68,
+        77,
+        69,
+        71,
+        72,
+        71,
+        74,
+        77,
+        78,
+        77,
+        78,
+        81,
+        79,
+        80,
+        82
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        30
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot.lambda$main$0:(Lcom/symphony/bdk/core/SymphonyBdk;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        86,
+        87,
+        88
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        34,
+        35,
+        37,
+        38,
+        41,
+        43,
+        44,
+        45,
+        47,
+        49,
+        50,
+        51,
+        53,
+        85,
+        90,
+        91
+      ]
+    },
+    "com.symphony.bdk.examples.df2.ReaderBot.randomColor:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        94,
+        95,
+        96
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

@@ -1,0 +1,1780 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 318.481,
+    "environmentDetectionTime" : 0.082,
+    "indexingTime" : 0.379,
+    "entryPointsTime" : 0.067,
+    "generationTime" : 2099.925,
+    "timeToFirstTest" : 2541.781,
+    "timeToLastTest" : 2544.114,
+    "indexQueryTime" : 2.382,
+    "verificationTime" : 43.341,
+    "validationTime" : 101.019
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R004" : "No meaningful assertions found",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T009" : "No implementation for abstract class",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 18,
+    "methodsCount" : 135,
+    "cumulativeDiffblueTestCount" : 72,
+    "cumulativeManualTestCount" : 8,
+    "completeTestCount" : 72,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 577,
+    "perMethodTestability" : {
+      "T000" : 41,
+      "T002" : 1,
+      "T003" : 18,
+      "T005" : 8,
+      "T009" : 4,
+      "T010" : 24,
+      "T012" : 37,
+      "T023" : 2
+    },
+    "perMethodOutcome" : {
+      "R000" : 42,
+      "R004" : 4,
+      "R013" : 2,
+      "T003" : 18,
+      "T005" : 2,
+      "T009" : 4,
+      "T010" : 24,
+      "T012" : 37,
+      "T023" : 2
+    },
+    "perTestOutcome" : {
+      "R000" : 72
+    },
+    "perTestValidation" : {
+      "V000" : 72,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.http.api.ApiClient" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T009" : 1,
+        "T010" : 9
+      },
+      "perMethodOutcome" : {
+        "T009" : 1,
+        "T010" : 9
+      }
+    },
+    "com.symphony.bdk.http.api.ApiClientBodyPart" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T012" : 3
+      }
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder" : {
+      "methodsCount" : 14,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T009" : 2,
+        "T010" : 12
+      },
+      "perMethodOutcome" : {
+        "T009" : 2,
+        "T010" : 12
+      }
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilderProvider" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.ApiException" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 12,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 4,
+        "T005" : 4,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 8,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 12
+      }
+    },
+    "com.symphony.bdk.http.api.ApiResponse" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 2,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "com.symphony.bdk.http.api.ApiRuntimeException" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T012" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.HttpClient" : {
+      "methodsCount" : 16,
+      "completeTestCount" : 33,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 14,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 14,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 33
+      }
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T002" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 8,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig" : {
+      "methodsCount" : 22,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 5,
+        "T012" : 17
+      },
+      "perMethodOutcome" : {
+        "T003" : 5,
+        "T012" : 17
+      }
+    },
+    "com.symphony.bdk.http.api.JSON" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.Pair" : {
+      "methodsCount" : 10,
+      "completeTestCount" : 6,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 3,
+        "T012" : 5
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "T003" : 3,
+        "T012" : 5
+      },
+      "perTestOutcome" : {
+        "R000" : 6
+      }
+    },
+    "com.symphony.bdk.http.api.auth.Authentication" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext" : {
+      "methodsCount" : 11,
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 7,
+        "T003" : 2,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R004" : 4,
+        "T003" : 2,
+        "T012" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 3
+      }
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T003" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T003" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils$MdcRunnable" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T012" : 1
+      }
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils" : {
+      "methodsCount" : 9,
+      "completeTestCount" : 7,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 5,
+        "T003" : 3,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 3,
+        "R013" : 2,
+        "T003" : 3,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 7
+      }
+    },
+    "com.symphony.bdk.http.api.util.TypeReference" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T009" : 1,
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T009" : 1,
+        "T010" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.http.api.ApiClient.addEnforcedAuthenticationScheme:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.getAuthentications:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.invokeAPI:(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Object;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lcom/symphony/bdk/http/api/util/TypeReference;)Lcom/symphony/bdk/http/api/ApiResponse;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.parameterToPairs:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.parameterToString:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.rotate:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T009",
+      "perMethodOutcome" : "T009",
+      "lineNumbers" : [
+        120
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClient.selectHeaderAccept:([Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClient.selectHeaderContentType:([Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBodyPart.<init>:(Ljava/io/InputStream;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        13
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClientBodyPart.getContent:()Ljava/io/InputStream;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClientBodyPart.getFilename:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.build:()Lcom/symphony/bdk/http/api/ApiClient;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withAuthentication:(Ljava/lang/String;Lcom/symphony/bdk/http/api/auth/Authentication;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withBasePath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withConnectionPoolMax:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T009",
+      "perMethodOutcome" : "T009",
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withConnectionPoolPerRoute:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T009",
+      "perMethodOutcome" : "T009",
+      "lineNumbers" : [
+        104
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withConnectionTimeout:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withDefaultHeader:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withKeyStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withProxy:(Ljava/lang/String;I)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withProxyCredentials:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withReadTimeout:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withTemporaryFolderPath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withTrustStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilder.withUserAgent:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiClientBuilderProvider.newInstance:()Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.ApiException.<init>:(ILjava/lang/String;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        54,
+        21,
+        22,
+        23,
+        55,
+        56
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.<init>:(ILjava/lang/String;Ljava/util/Map;Ljava/lang/String;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        67,
+        68,
+        69,
+        70
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.<init>:(ILjava/lang/Throwable;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        42,
+        21,
+        22,
+        23,
+        43,
+        44
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        32,
+        21,
+        22,
+        23,
+        33
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.getCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        21
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.getResponseBody:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        23
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.getResponseHeaders:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.isClientError:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        87
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.isServerError:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        96
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.isTooManyRequestsError:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        105
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiException.isUnauthorized:()Z" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiResponse.<init>:(ILjava/util/Map;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        29,
+        30
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiResponse.<init>:(ILjava/util/Map;Ljava/lang/Object;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiResponse.getData:()Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        20
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiResponse.getHeaders:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiResponse.getStatusCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiRuntimeException.<init>:(Lcom/symphony/bdk/http/api/ApiException;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiRuntimeException.getCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiRuntimeException.getResponseBody:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "com.symphony.bdk.http.api.ApiRuntimeException.getResponseHeaders:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        17
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.<init>:(Lcom/symphony/bdk/http/api/ApiClientBuilderProvider;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        236,
+        242,
+        244,
+        245,
+        247,
+        248,
+        250,
+        251,
+        252,
+        253,
+        255,
+        256,
+        236
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.basePath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        264,
+        265
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.build:()Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        344,
+        346,
+        347,
+        349,
+        350,
+        352,
+        353,
+        355,
+        356,
+        358,
+        359,
+        362,
+        363,
+        365,
+        366,
+        362
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.cookie:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        286,
+        287
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.header:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        275,
+        276
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.keyStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        298,
+        299,
+        300
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.proxy:(Ljava/lang/String;I)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        324,
+        325,
+        326
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.proxyCredentials:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        337,
+        338,
+        339
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$Builder.trustStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        311,
+        312,
+        313
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        372
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.<init>:(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/List;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        373
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.appendCookie:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        403,
+        404,
+        407,
+        408
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.appendFormParam:(Ljava/lang/String;Ljava/lang/Object;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        423,
+        424,
+        426,
+        427,
+        430,
+        431
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.appendHeader:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        393,
+        394,
+        397,
+        398
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.appendQueryParam:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        413,
+        414,
+        417,
+        418
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getAccept:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        384
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getBody:()Ljava/lang/Object;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        383
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getContentType:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        385
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getCookies:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        378
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getFormParams:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        388
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getHeaders:()Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        377
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getPath:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        382
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.getQueryParams:()Ljava/util/List;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        380
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withAccept:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        384
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withBody:(Ljava/lang/Object;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        383
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withContentType:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        385
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withCookies:(Ljava/util/Map;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        378
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withFormParams:(Ljava/util/Map;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        379
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withHeaders:(Ljava/util/Map;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        377
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withPath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        382
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient$RequestConfig.withQueryParams:(Ljava/util/List;)Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        380
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.<init>:(Lcom/symphony/bdk/http/api/ApiClient;Lcom/symphony/bdk/http/api/HttpClient$RequestConfig;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.accept:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        220
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.body:(Ljava/lang/Object;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        210
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.builder:(Lcom/symphony/bdk/http/api/ApiClientBuilderProvider;)Lcom/symphony/bdk/http/api/HttpClient$Builder;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        140
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.contentType:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        230
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.cookie:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        172
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.delete:(Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        130
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.formParam:(Ljava/lang/String;Ljava/lang/Object;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        197,
+        199,
+        197
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.get:(Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        82
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.header:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        161
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.method:(Ljava/lang/String;Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        56,
+        70
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.patch:(Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        118
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.path:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        150
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.post:(Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        94
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.put:(Lcom/symphony/bdk/http/api/util/TypeReference;)Ljava/lang/Object;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        106
+      ]
+    },
+    "com.symphony.bdk.http.api.HttpClient.queryParam:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/HttpClient;" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        183,
+        185,
+        183
+      ]
+    },
+    "com.symphony.bdk.http.api.JSON.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        3
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.<init>:(Ljava/lang/String;Ljava/lang/String;)V" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        18,
+        15,
+        16,
+        19,
+        20,
+        21
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.canEqual:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.getName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        15
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.getValue:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        16
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.hashCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.isInvalidString:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        44
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.pair:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/Pair;" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.setName:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        28,
+        29,
+        32,
+        33
+      ]
+    },
+    "com.symphony.bdk.http.api.Pair.setValue:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        36,
+        37,
+        40,
+        41
+      ]
+    },
+    "com.symphony.bdk.http.api.auth.Authentication.apply:(Ljava/util/Map;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        25,
+        27
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.clear:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        59,
+        60
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.doWithTraceId:(Ljava/lang/String;Ljava/lang/Runnable;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        69,
+        70,
+        72,
+        74,
+        75,
+        76,
+        74,
+        75,
+        76,
+        77
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.getTraceId:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        51
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.hasTraceId:()Z" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        55
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.lambda$randomAlphanumeric$0:(I)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        85
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.randomAlphanumeric:(I)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        81,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        84
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.setBaseTraceId:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        47,
+        48
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.setTraceId:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        33,
+        34
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.DistributedTracingContext.setTraceId:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        40,
+        41
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils$MdcRunnable.<init>:(Ljava/lang/Runnable;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        50,
+        53,
+        50
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils$MdcRunnable.run:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        57,
+        59,
+        61,
+        62,
+        61,
+        62,
+        63
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        15,
+        17
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils.afterCallMDCCleanUp:(Ljava/util/Map;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        44,
+        45,
+        46,
+        48
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils.beforeCallMDCSetup:(Ljava/util/Map;)Ljava/util/Map;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        31,
+        32,
+        33,
+        34,
+        37,
+        40
+      ]
+    },
+    "com.symphony.bdk.http.api.tracing.MDCUtils.wrap:(Ljava/lang/Runnable;)Ljava/lang/Runnable;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        27
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        91,
+        93
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.addDefaultRootCaCertificates:(Ljava/security/KeyStore;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        47,
+        49,
+        50,
+        51,
+        52,
+        53,
+        52,
+        50,
+        57
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.getBdkVersion:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        79,
+        80,
+        82,
+        83,
+        85,
+        88
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.getUserAgent:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        32
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.isCollectionOf:(Ljava/lang/Object;Ljava/lang/Class;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        70,
+        71,
+        74,
+        75
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.isCollectionOfApiClientBodyPart:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        64
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.isCollectionOfFiles:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 3,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 3
+      },
+      "lineNumbers" : [
+        60
+      ]
+    },
+    "com.symphony.bdk.http.api.util.ApiUtils.logTrustStore:(Ljava/security/KeyStore;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        36,
+        37,
+        38,
+        39,
+        41
+      ]
+    },
+    "com.symphony.bdk.http.api.util.TypeReference.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010",
+      "lineNumbers" : [
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    "com.symphony.bdk.http.api.util.TypeReference.getType:()Ljava/lang/reflect/Type;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T009",
+      "perMethodOutcome" : "T009",
+      "lineNumbers" : [
+        30
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

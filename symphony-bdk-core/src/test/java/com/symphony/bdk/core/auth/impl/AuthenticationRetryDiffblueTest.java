@@ -1,0 +1,426 @@
+package com.symphony.bdk.core.auth.impl;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import com.diffblue.cover.annotations.ManagedByDiffblue;
+import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.bdk.core.auth.exception.AuthUnauthorizedException;
+import com.symphony.bdk.core.config.model.BdkRetryConfig;
+import com.symphony.bdk.core.retry.RetryWithRecovery;
+import com.symphony.bdk.core.retry.RetryWithRecoveryBuilder;
+import com.symphony.bdk.core.retry.function.SupplierWithApiException;
+import com.symphony.bdk.core.retry.resilience4j.Resilience4jRetryWithRecovery;
+import com.symphony.bdk.core.test.BdkRetryConfigTestHelper;
+import com.symphony.bdk.http.api.ApiException;
+import com.symphony.bdk.http.api.ApiRuntimeException;
+import java.net.ConnectException;
+import java.net.SocketTimeoutException;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+
+class AuthenticationRetryDiffblueTest {
+  /**
+   * Test {@link AuthenticationRetry#getBaseRetryBuilder(BdkRetryConfig)}.
+   *
+   * <p>Method under test: {@link AuthenticationRetry#getBaseRetryBuilder(BdkRetryConfig)}
+   */
+  @Test
+  @DisplayName("Test getBaseRetryBuilder(BdkRetryConfig)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "RetryWithRecoveryBuilder AuthenticationRetry.getBaseRetryBuilder(BdkRetryConfig)"
+  })
+  void testGetBaseRetryBuilder() {
+    // Arrange and Act
+    RetryWithRecoveryBuilder<Object> actualBaseRetryBuilder =
+        AuthenticationRetry.getBaseRetryBuilder(BdkRetryConfigTestHelper.ofMinimalInterval(3));
+
+    // Assert
+    RetryWithRecovery<Object> retryWithRecovery = actualBaseRetryBuilder.build();
+    assertTrue(retryWithRecovery instanceof Resilience4jRetryWithRecovery);
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried() {
+    // Arrange, Act and Assert
+    assertTrue(
+        AuthenticationRetry.canAuthenticationBeRetried(
+            new ApiException(500, "https://example.org/example")));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried2() {
+    // Arrange, Act and Assert
+    assertFalse(
+        AuthenticationRetry.canAuthenticationBeRetried(
+            new ApiException(499, "https://example.org/example")));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried3() {
+    // Arrange, Act and Assert
+    assertTrue(
+        AuthenticationRetry.canAuthenticationBeRetried(
+            new ApiException(429, "https://example.org/example")));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <ul>
+   *   <li>Given {@link ConnectException#ConnectException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable); given ConnectException()")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried_givenConnectException() {
+    // Arrange
+    Throwable t = new Throwable("foo");
+    t.initCause(new ConnectException());
+
+    // Act and Assert
+    assertTrue(AuthenticationRetry.canAuthenticationBeRetried(t));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <ul>
+   *   <li>Given {@link SocketTimeoutException#SocketTimeoutException()}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable); given SocketTimeoutException()")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried_givenSocketTimeoutException() {
+    // Arrange
+    Throwable t = new Throwable("foo");
+    t.initCause(new SocketTimeoutException());
+
+    // Act and Assert
+    assertTrue(AuthenticationRetry.canAuthenticationBeRetried(t));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}.
+   *
+   * <ul>
+   *   <li>When {@link Throwable#Throwable()}.
+   *   <li>Then return {@code false}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#canAuthenticationBeRetried(Throwable)}
+   */
+  @Test
+  @DisplayName("Test canAuthenticationBeRetried(Throwable); when Throwable(); then return 'false'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"boolean AuthenticationRetry.canAuthenticationBeRetried(Throwable)"})
+  void testCanAuthenticationBeRetried_whenThrowable_thenReturnFalse() {
+    // Arrange, Act and Assert
+    assertFalse(AuthenticationRetry.canAuthenticationBeRetried(new Throwable()));
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>Given {@code Get}.
+   *   <li>Then return {@code Get}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); given 'Get'; then return 'Get'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_givenGet_thenReturnGet() throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenReturn("Get");
+
+    // Act
+    Object actualExecuteAndRetryResult =
+        authenticationRetry.executeAndRetry("Name", "42 Main St", supplier, "An error occurred");
+
+    // Assert
+    verify(supplier).get();
+    assertEquals("Get", actualExecuteAndRetryResult);
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>Then throw {@link RuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); then throw RuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_thenThrowRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get())
+        .thenThrow(new ApiRuntimeException(new ApiException(3, "https://example.org/example")));
+
+    // Act and Assert
+    assertThrows(
+        RuntimeException.class,
+        () ->
+            authenticationRetry.executeAndRetry(
+                "Name", "42 Main St", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>When {@code 42 Main St}.
+   *   <li>Then throw {@link ApiRuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); when '42 Main St'; then throw ApiRuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_when42MainSt_thenThrowApiRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenThrow(new ApiException(3, "https://example.org/example"));
+
+    // Act and Assert
+    assertThrows(
+        ApiRuntimeException.class,
+        () ->
+            authenticationRetry.executeAndRetry(
+                "Name", "42 Main St", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>When {@code /agent}.
+   *   <li>Then throw {@link ApiRuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); when '/agent'; then throw ApiRuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_whenAgent_thenThrowApiRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenThrow(new ApiException(3, "https://example.org/example"));
+
+    // Act and Assert
+    assertThrows(
+        ApiRuntimeException.class,
+        () -> authenticationRetry.executeAndRetry("Name", "/agent", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>When {@code /keyauth}.
+   *   <li>Then throw {@link ApiRuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); when '/keyauth'; then throw ApiRuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_whenKeyauth_thenThrowApiRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenThrow(new ApiException(3, "https://example.org/example"));
+
+    // Act and Assert
+    assertThrows(
+        ApiRuntimeException.class,
+        () ->
+            authenticationRetry.executeAndRetry("Name", "/keyauth", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>When {@code /relay}.
+   *   <li>Then throw {@link ApiRuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); when '/relay'; then throw ApiRuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_whenRelay_thenThrowApiRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenThrow(new ApiException(3, "https://example.org/example"));
+
+    // Act and Assert
+    assertThrows(
+        ApiRuntimeException.class,
+        () -> authenticationRetry.executeAndRetry("Name", "/relay", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+
+  /**
+   * Test {@link AuthenticationRetry#executeAndRetry(String, String, SupplierWithApiException,
+   * String)}.
+   *
+   * <ul>
+   *   <li>When {@code /sessionauth}.
+   *   <li>Then throw {@link ApiRuntimeException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link AuthenticationRetry#executeAndRetry(String, String,
+   * SupplierWithApiException, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test executeAndRetry(String, String, SupplierWithApiException, String); when '/sessionauth'; then throw ApiRuntimeException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "Object AuthenticationRetry.executeAndRetry(String, String, SupplierWithApiException, String)"
+  })
+  void testExecuteAndRetry_whenSessionauth_thenThrowApiRuntimeException()
+      throws AuthUnauthorizedException, ApiException {
+    // Arrange
+    BdkRetryConfig retryConfig = BdkRetryConfigTestHelper.ofMinimalInterval(3);
+    AuthenticationRetry<Object> authenticationRetry = new AuthenticationRetry<>(retryConfig);
+
+    SupplierWithApiException<Object> supplier = mock(SupplierWithApiException.class);
+    when(supplier.get()).thenThrow(new ApiException(3, "https://example.org/example"));
+
+    // Act and Assert
+    assertThrows(
+        ApiRuntimeException.class,
+        () ->
+            authenticationRetry.executeAndRetry(
+                "Name", "/sessionauth", supplier, "An error occurred"));
+    verify(supplier).get();
+  }
+}

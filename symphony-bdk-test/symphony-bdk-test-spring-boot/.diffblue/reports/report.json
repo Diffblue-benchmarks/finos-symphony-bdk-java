@@ -1,0 +1,397 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 399.061,
+    "environmentDetectionTime" : 0.05,
+    "indexingTime" : 0.432,
+    "entryPointsTime" : 0.038,
+    "generationTime" : 2958.044,
+    "timeToFirstTest" : 6403.699,
+    "timeToLastTest" : 5098.789,
+    "indexQueryTime" : 5.021,
+    "verificationTime" : 105.518,
+    "validationTime" : 113.687
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R027" : "Missing beans when creating Spring context",
+    "T000" : "Method eligible for test creation",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 3,
+    "methodsCount" : 31,
+    "cumulativeDiffblueTestCount" : 2,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 2,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 157,
+    "perMethodTestability" : {
+      "T000" : 17,
+      "T010" : 1,
+      "T012" : 13
+    },
+    "perMethodOutcome" : {
+      "R000" : 2,
+      "R027" : 14,
+      "T005" : 1,
+      "T010" : 1,
+      "T012" : 13
+    },
+    "perTestOutcome" : {
+      "R000" : 2
+    },
+    "perTestValidation" : {
+      "V000" : 2,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.test.BdkSpringTestProperties" : {
+      "methodsCount" : 13,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T012" : 13
+      },
+      "perMethodOutcome" : {
+        "T012" : 13
+      }
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig" : {
+      "methodsCount" : 17,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 17
+      },
+      "perMethodOutcome" : {
+        "R000" : 2,
+        "R027" : 14,
+        "T005" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "com.symphony.bdk.test.spring.annotation.SymphonyBdkSpringBootTest" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.test.BdkSpringTestProperties.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.canEqual:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.equals:(Ljava/lang/Object;)Z" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.getDisplayName:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        11
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.getEmail:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        12
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.getId:()Ljava/lang/Long;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        9
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.getUsername:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        10
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.hashCode:()I" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.setDisplayName:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.setEmail:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.setId:(Ljava/lang/Long;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.setUsername:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.BdkSpringTestProperties.toString:()Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        40,
+        42
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.activityRegistry:(Lcom/symphony/bdk/core/service/session/SessionService;Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)Lcom/symphony/bdk/core/activity/ActivityRegistry;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        126,
+        127,
+        128,
+        129
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.applicationService:()Lcom/symphony/bdk/core/service/application/ApplicationService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        115
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.botInfo:(Lcom/symphony/bdk/test/BdkSpringTestProperties;)Lcom/symphony/bdk/gen/api/model/UserV2;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        51,
+        52,
+        51
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.botSession:()Lcom/symphony/bdk/core/auth/AuthSession;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.connectionService:()Lcom/symphony/bdk/core/service/connection/ConnectionService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        105
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.datafeedLoop:()Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        46
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.disclaimerService:()Lcom/symphony/bdk/core/service/disclaimer/DisclaimerService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        95
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.healthService:()Lcom/symphony/bdk/core/service/health/HealthService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        120
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.messageService:(Lcom/symphony/bdk/template/api/TemplateEngine;)Lcom/symphony/bdk/core/service/message/MessageService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        65,
+        66,
+        67
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.presenceService:()Lcom/symphony/bdk/core/service/presence/PresenceService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        100
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.sessionService:(Lcom/symphony/bdk/gen/api/model/UserV2;)Lcom/symphony/bdk/core/service/session/SessionService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        78,
+        79,
+        80
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.signalService:()Lcom/symphony/bdk/core/service/signal/SignalService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        110
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.slashAnnotationProcessor:()Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        134
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.streamService:()Lcom/symphony/bdk/core/service/stream/StreamService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        85
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.templateEngine:()Lcom/symphony/bdk/template/api/TemplateEngine;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        73
+      ]
+    },
+    "com.symphony.bdk.test.SymphonyBdkSpringTestConfig.userService:()Lcom/symphony/bdk/core/service/user/UserService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R027",
+      "lineNumbers" : [
+        90
+      ]
+    },
+    "com.symphony.bdk.test.spring.annotation.SymphonyBdkSpringBootTest.properties:()[Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    }
+  },
+  "validationMetrics" : { }
+}

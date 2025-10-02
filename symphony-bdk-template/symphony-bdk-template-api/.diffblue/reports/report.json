@@ -1,0 +1,268 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 278.829,
+    "environmentDetectionTime" : 0.023,
+    "indexingTime" : 0.398,
+    "entryPointsTime" : 0.012,
+    "generationTime" : 2361.742,
+    "timeToFirstTest" : 3897.522,
+    "timeToLastTest" : 3370.559,
+    "indexQueryTime" : 2.0460000000000003,
+    "verificationTime" : 74.652,
+    "validationTime" : 102.113
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T010" : "Abstract or interface method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 4,
+    "methodsCount" : 13,
+    "cumulativeDiffblueTestCount" : 4,
+    "cumulativeManualTestCount" : 3,
+    "completeTestCount" : 4,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 82,
+    "perMethodTestability" : {
+      "T000" : 3,
+      "T003" : 2,
+      "T005" : 3,
+      "T010" : 4,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 4,
+      "R002" : 1,
+      "R013" : 1,
+      "T003" : 2,
+      "T010" : 4,
+      "T023" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 4
+    },
+    "perTestValidation" : {
+      "V000" : 4,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.template.api.Template" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    },
+    "com.symphony.bdk.template.api.TemplateEngine" : {
+      "methodsCount" : 4,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T010" : 3
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T010" : 3
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.template.api.TemplateException" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "com.symphony.bdk.template.api.TemplateResolver" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T003" : 2,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "R013" : 1,
+        "T003" : 2,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.template.api.Template.process:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.template.api.TemplateEngine.getDefaultImplementation:()Lcom/symphony/bdk/template/api/TemplateEngine;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        44,
+        46,
+        47,
+        49,
+        50,
+        52,
+        53,
+        56
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateEngine.newTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.template.api.TemplateEngine.newTemplateFromFile:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.template.api.TemplateEngine.newTemplateFromString:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    },
+    "com.symphony.bdk.template.api.TemplateException.<init>:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        15,
+        16
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateException.<init>:(Ljava/lang/String;Ljava/lang/Throwable;)V" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        19,
+        20
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        21,
+        22
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.<init>:(Lcom/symphony/bdk/template/api/TemplateEngine;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        28,
+        29,
+        30
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.resolve:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        39,
+        41,
+        42,
+        45,
+        46,
+        48
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.tryFetchTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        53,
+        54,
+        55,
+        57
+      ]
+    },
+    "com.symphony.bdk.template.api.TemplateResolver.tryFetchTemplateFromFileSystem:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        62,
+        63,
+        64,
+        66
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

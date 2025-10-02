@@ -1,0 +1,889 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 367.062,
+    "environmentDetectionTime" : 0.122,
+    "indexingTime" : 0.384,
+    "entryPointsTime" : 0.104,
+    "generationTime" : 2173.882,
+    "timeToFirstTest" : 2910.082,
+    "timeToLastTest" : 2766.096,
+    "indexQueryTime" : 8.120000000000001,
+    "verificationTime" : 57.187,
+    "validationTime" : 108.044
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R004" : "No meaningful assertions found",
+    "T000" : "Method eligible for test creation",
+    "T001" : "Trivial getter",
+    "T002" : "Trivial setter",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T012" : "Synthetic method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 3,
+    "methodsCount" : 48,
+    "cumulativeDiffblueTestCount" : 67,
+    "cumulativeManualTestCount" : 23,
+    "completeTestCount" : 67,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 541,
+    "perMethodTestability" : {
+      "T000" : 25,
+      "T001" : 2,
+      "T002" : 1,
+      "T003" : 7,
+      "T005" : 1,
+      "T012" : 11,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 27,
+      "R002" : 1,
+      "R004" : 1,
+      "T003" : 7,
+      "T012" : 11,
+      "T023" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 67
+    },
+    "perTestValidation" : {
+      "V000" : 67,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.http.webclient.ApiClientBuilderProviderWebClient" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient" : {
+      "methodsCount" : 21,
+      "completeTestCount" : 17,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 15,
+        "T002" : 1,
+        "T012" : 4,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 15,
+        "R004" : 1,
+        "T012" : 4,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 17
+      }
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient" : {
+      "methodsCount" : 25,
+      "completeTestCount" : 49,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 9,
+        "T001" : 2,
+        "T003" : 7,
+        "T012" : 7
+      },
+      "perMethodOutcome" : {
+        "R000" : 11,
+        "T003" : 7,
+        "T012" : 7
+      },
+      "perTestOutcome" : {
+        "R000" : 49
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.http.webclient.ApiClientBuilderProviderWebClient.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        12
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderProviderWebClient.newInstance:()Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        22
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.<init>:()V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.build:()Lcom/symphony/bdk/http/api/ApiClient;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.configureProxy:(Lreactor/netty/http/client/HttpClient;)Lreactor/netty/http/client/HttpClient;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        233
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.createHttpClient:()Lreactor/netty/http/client/HttpClient;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R004",
+      "lineNumbers" : [
+        190,
+        191,
+        192,
+        193,
+        197,
+        198,
+        201
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.createSSLContext:()Lio/netty/handler/ssl/SslContext;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        225,
+        226,
+        227
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.lambda$configureProxy$2:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        238
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.lambda$configureProxy$3:(Lreactor/netty/transport/ProxyProvider$TypeSpec;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        233
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.lambda$createHttpClient$0:(Lreactor/netty/tcp/SslProvider$SslContextSpec;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        191
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.lambda$createHttpClient$1:(Lreactor/netty/Connection;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        193
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withAuthentication:(Ljava/lang/String;Lcom/symphony/bdk/http/api/auth/Authentication;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        184,
+        185
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withBasePath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T002",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        90,
+        91
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withConnectionTimeout:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        146,
+        147
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withDefaultHeader:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        128,
+        129
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withKeyStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        108,
+        109,
+        110
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withProxy:(Ljava/lang/String;I)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        164,
+        165,
+        166
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withProxyCredentials:(Ljava/lang/String;Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        174,
+        175,
+        176
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withReadTimeout:(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        155,
+        156
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withTemporaryFolderPath:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        137,
+        138
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withTrustStore:([BLjava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        118,
+        119,
+        120
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient.withUserAgent:(Ljava/lang/String;)Lcom/symphony/bdk/http/api/ApiClientBuilder;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        99,
+        100
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.<init>:(Lorg/springframework/web/reactive/function/client/WebClient;Ljava/lang/String;Ljava/util/Map;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.addEnforcedAuthenticationScheme:(Ljava/lang/String;)V" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        450,
+        451
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.addFileToFormParam:(Ljava/lang/String;Ljava/io/File;Lorg/springframework/util/MultiValueMap;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        255,
+        256,
+        257
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.escapeString:(Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        434
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.getAuthentications:()Ljava/util/Map;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        442
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.getBasePath:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T001",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        304
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.invokeAPI:(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Object;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lcom/symphony/bdk/http/api/util/TypeReference;)Lcom/symphony/bdk/http/api/ApiResponse;" : {
+      "completeTestCount" : 13,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 13
+      },
+      "lineNumbers" : [
+        81,
+        82,
+        83,
+        84,
+        87,
+        88,
+        90,
+        91,
+        101,
+        103,
+        104,
+        107,
+        109,
+        110,
+        111,
+        114,
+        115,
+        117,
+        118,
+        119,
+        120,
+        121,
+        123,
+        126,
+        127,
+        128,
+        129,
+        130,
+        132,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        144,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        157,
+        158,
+        162,
+        163,
+        177,
+        178,
+        162,
+        164,
+        165,
+        166,
+        167,
+        169,
+        170,
+        171,
+        172,
+        174,
+        177,
+        178,
+        180
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.isJsonMime:(Ljava/lang/String;)Z" : {
+      "completeTestCount" : 4,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 4
+      },
+      "lineNumbers" : [
+        409,
+        410
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$invokeAPI$0:(Ljava/lang/String;Ljava/util/List;Lorg/springframework/web/util/UriBuilder;)Ljava/net/URI;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        92,
+        93,
+        94,
+        95,
+        96,
+        98,
+        100
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$invokeAPI$1:(Lcom/symphony/bdk/http/api/util/TypeReference;Lorg/springframework/web/reactive/function/client/ClientResponse;)Lreactor/core/publisher/Mono;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        162
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$serializeMultiPartDataEntry$5:(Ljava/lang/String;Lorg/springframework/util/MultiValueMap;Ljava/lang/Object;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        238
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$toApiResponse$2:(Lorg/springframework/web/reactive/function/client/ClientResponse;Ljava/util/Map;Ljava/lang/Object;)Lcom/symphony/bdk/http/api/ApiResponse;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        204
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$toApiResponse$3:(Lorg/springframework/web/reactive/function/client/ClientResponse;Ljava/util/Map;Ljava/lang/Object;)Lcom/symphony/bdk/http/api/ApiResponse;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        208
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$toApiResponse$4:(Lorg/springframework/web/reactive/function/client/ClientResponse;Ljava/util/Map;Ljava/lang/String;)Lreactor/core/publisher/Mono;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        215,
+        216,
+        217,
+        219
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.lambda$withEnforcedSecurityScheme$6:(I)[Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        295
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.parameterToPairs:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)Ljava/util/List;" : {
+      "completeTestCount" : 13,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 13
+      },
+      "lineNumbers" : [
+        333,
+        336,
+        337,
+        341,
+        342,
+        344,
+        345,
+        348,
+        349,
+        353,
+        356,
+        357,
+        358,
+        359,
+        361,
+        364,
+        366,
+        368,
+        369,
+        371,
+        372,
+        374,
+        375,
+        377,
+        381,
+        382,
+        383,
+        384,
+        385,
+        387,
+        389
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.parameterToString:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        320,
+        321,
+        322,
+        324
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.selectHeaderAccept:([Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        397,
+        398,
+        400,
+        401,
+        402,
+        400,
+        405
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.selectHeaderContentType:([Ljava/lang/String;)Ljava/lang/String;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        418,
+        419,
+        421,
+        422,
+        423,
+        421,
+        426
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.serializeApiClientBodyPart:(Ljava/lang/String;Lcom/symphony/bdk/http/api/ApiClientBodyPart;Lorg/springframework/util/MultiValueMap;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        262,
+        263,
+        264,
+        265,
+        267,
+        268
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.serializeMultiPartData:(Ljava/util/Map;)Lorg/springframework/util/MultiValueMap;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        225,
+        226,
+        227,
+        228,
+        230
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.serializeMultiPartDataEntry:(Ljava/lang/String;Ljava/lang/Object;Lorg/springframework/util/MultiValueMap;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        240,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        250,
+        252
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.toApiResponse:(Lcom/symphony/bdk/http/api/util/TypeReference;Lorg/springframework/web/reactive/function/client/ClientResponse;)Lreactor/core/publisher/Mono;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        185,
+        186,
+        187,
+        188,
+        193,
+        194,
+        195,
+        194,
+        196,
+        197,
+        198,
+        199,
+        198,
+        201,
+        202,
+        203,
+        204,
+        206,
+        207,
+        208,
+        212,
+        214
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.updateParamsForAuth:([Ljava/lang/String;Ljava/util/Map;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        277,
+        278,
+        280,
+        281,
+        282,
+        283,
+        284,
+        286,
+        281,
+        288
+      ]
+    },
+    "com.symphony.bdk.http.webclient.ApiClientWebClient.withEnforcedSecurityScheme:([Ljava/lang/String;)[Ljava/lang/String;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        291,
+        292,
+        295
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}

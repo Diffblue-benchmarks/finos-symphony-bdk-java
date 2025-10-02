@@ -1,0 +1,221 @@
+{
+  "meta" : {
+    "reportVersion" : "2.7"
+  },
+  "run" : {
+    "version" : "2025.09.01-44e352d-licensed",
+    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 351.462,
+    "environmentDetectionTime" : 0.039,
+    "indexingTime" : 0.411,
+    "entryPointsTime" : 0.026,
+    "generationTime" : 2658.82,
+    "timeToFirstTest" : 5045.45,
+    "timeToLastTest" : 4090.619,
+    "indexQueryTime" : 8.485,
+    "verificationTime" : 92.491,
+    "validationTime" : 110.688
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T012" : "Synthetic method",
+    "T023" : "Testability unknown",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 3,
+    "methodsCount" : 10,
+    "cumulativeDiffblueTestCount" : 2,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 2,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 57,
+    "perMethodTestability" : {
+      "T000" : 3,
+      "T005" : 3,
+      "T006" : 1,
+      "T012" : 2,
+      "T023" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 2,
+      "R013" : 1,
+      "T005" : 3,
+      "T006" : 1,
+      "T012" : 2,
+      "T023" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 2
+    },
+    "perTestValidation" : {
+      "V000" : 2,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.examples.app.spring.ExtensionAppApplication" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T005" : 1,
+        "T006" : 1
+      },
+      "perMethodOutcome" : {
+        "T005" : 1,
+        "T006" : 1
+      }
+    },
+    "com.symphony.bdk.examples.app.spring.HelloController" : {
+      "methodsCount" : 3,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "T005" : 1,
+        "T023" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 2,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R013" : 1,
+        "T005" : 1,
+        "T012" : 2
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.examples.app.spring.ExtensionAppApplication.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        7
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.ExtensionAppApplication.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        10,
+        11
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.HelloController.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T023",
+      "perMethodOutcome" : "T023"
+    },
+    "com.symphony.bdk.examples.app.spring.HelloController.<init>:(Lcom/symphony/bdk/core/service/stream/StreamService;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        23,
+        24,
+        25
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.HelloController.hello:()Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        12
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig.filterChain:(Lorg/springframework/security/config/annotation/web/builders/HttpSecurity;)Lorg/springframework/security/web/SecurityFilterChain;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        17,
+        18,
+        19,
+        20,
+        17
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig.lambda$filterChain$0:(Lorg/springframework/security/config/annotation/web/configurers/AuthorizeHttpRequestsConfigurer$AuthorizationManagerRequestMatcherRegistry;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        18
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig.lambda$filterChain$1:(Lorg/springframework/security/config/annotation/web/configurers/HeadersConfigurer;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        19
+      ]
+    },
+    "com.symphony.bdk.examples.app.spring.SecurityConfig.webSecurityCustomizer:()Lorg/springframework/security/config/annotation/web/configuration/WebSecurityCustomizer;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        26
+      ]
+    }
+  },
+  "validationMetrics" : { }
+}
