@@ -16,6 +16,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Set;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -23,8 +24,83 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.support.DefaultMultipartHttpServletRequest;
 
 class TracingFilterDiffblueTest {
+  /**
+   * Test {@link TracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
+   *
+   * <p>Method under test: {@link TracingFilter#doFilter(ServletRequest, ServletResponse,
+   * FilterChain)}
+   */
+  @Test
+  @DisplayName("Test doFilter(ServletRequest, ServletResponse, FilterChain)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void TracingFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
+  void testDoFilter() throws ServletException, IOException {
+    // Arrange
+    TracingFilter tracingFilter = new TracingFilter();
+    MockHttpServletRequest request = new MockHttpServletRequest();
+    LinkedMultiValueMap<String, MultipartFile> mpFiles = new LinkedMultiValueMap<>();
+    HashMap<String, String[]> mpParams = new HashMap<>();
+
+    DefaultMultipartHttpServletRequest servletRequest =
+        new DefaultMultipartHttpServletRequest(request, mpFiles, mpParams, new HashMap<>());
+    MockHttpServletResponse servletResponse = new MockHttpServletResponse();
+
+    FilterChain filterChain = mock(FilterChain.class);
+    doNothing()
+        .when(filterChain)
+        .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
+
+    // Act
+    tracingFilter.doFilter(servletRequest, servletResponse, filterChain);
+
+    // Assert
+    verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
+    Collection<String> headerNames = servletResponse.getHeaderNames();
+    assertEquals(1, headerNames.size());
+    assertTrue(headerNames instanceof Set);
+    assertTrue(headerNames.contains("X-Trace-Id"));
+  }
+
+  /**
+   * Test {@link TracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
+   *
+   * <p>Method under test: {@link TracingFilter#doFilter(ServletRequest, ServletResponse,
+   * FilterChain)}
+   */
+  @Test
+  @DisplayName("Test doFilter(ServletRequest, ServletResponse, FilterChain)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"void TracingFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
+  void testDoFilter2() throws ServletException, IOException {
+    // Arrange
+    TracingFilter tracingFilter = new TracingFilter();
+    DefaultMultipartHttpServletRequest servletRequest =
+        new DefaultMultipartHttpServletRequest(new MockHttpServletRequest());
+    MockHttpServletResponse servletResponse = new MockHttpServletResponse();
+
+    FilterChain filterChain = mock(FilterChain.class);
+    doNothing()
+        .when(filterChain)
+        .doFilter(Mockito.<ServletRequest>any(), Mockito.<ServletResponse>any());
+
+    // Act
+    tracingFilter.doFilter(servletRequest, servletResponse, filterChain);
+
+    // Assert
+    verify(filterChain).doFilter(isA(ServletRequest.class), isA(ServletResponse.class));
+    Collection<String> headerNames = servletResponse.getHeaderNames();
+    assertEquals(1, headerNames.size());
+    assertTrue(headerNames instanceof Set);
+    assertTrue(headerNames.contains("X-Trace-Id"));
+  }
+
   /**
    * Test {@link TracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
    *
@@ -107,7 +183,7 @@ class TracingFilterDiffblueTest {
    * Test {@link TracingFilter#doFilter(ServletRequest, ServletResponse, FilterChain)}.
    *
    * <ul>
-   *   <li>Then {@link MockHttpServletResponse} (default constructor) HeaderNames size is one.
+   *   <li>When {@link MockHttpServletRequest#MockHttpServletRequest()}.
    * </ul>
    *
    * <p>Method under test: {@link TracingFilter#doFilter(ServletRequest, ServletResponse,
@@ -115,12 +191,11 @@ class TracingFilterDiffblueTest {
    */
   @Test
   @DisplayName(
-      "Test doFilter(ServletRequest, ServletResponse, FilterChain); then MockHttpServletResponse (default constructor) HeaderNames size is one")
+      "Test doFilter(ServletRequest, ServletResponse, FilterChain); when MockHttpServletRequest()")
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"void TracingFilter.doFilter(ServletRequest, ServletResponse, FilterChain)"})
-  void testDoFilter_thenMockHttpServletResponseHeaderNamesSizeIsOne()
-      throws ServletException, IOException {
+  void testDoFilter_whenMockHttpServletRequest() throws ServletException, IOException {
     // Arrange
     TracingFilter tracingFilter = new TracingFilter();
     MockHttpServletRequest servletRequest = new MockHttpServletRequest();

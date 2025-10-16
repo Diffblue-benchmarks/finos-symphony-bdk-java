@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "creationTimestamp" : "2025-10-15T18:26:34.140977856Z",
     "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
-    "totalTime" : 310.873,
-    "environmentDetectionTime" : 0.035,
-    "indexingTime" : 0.394,
-    "entryPointsTime" : 0.023,
-    "generationTime" : 2347.734,
-    "timeToFirstTest" : 3617.863,
-    "timeToLastTest" : 3224.399,
-    "indexQueryTime" : 2.6550000000000002,
-    "verificationTime" : 73.499,
-    "validationTime" : 101.23
+    "totalTime" : 324.179,
+    "environmentDetectionTime" : 0.038,
+    "indexingTime" : 0.373,
+    "entryPointsTime" : 0.027,
+    "generationTime" : 2409.625,
+    "timeToFirstTest" : 3751.557,
+    "timeToLastTest" : 3330.194,
+    "indexQueryTime" : 2.851,
+    "verificationTime" : 78.208,
+    "validationTime" : 106.399
   },
   "codes" : {
     "R000" : "Success",
@@ -30,9 +30,9 @@
   "summary" : {
     "classesCount" : 2,
     "methodsCount" : 8,
-    "cumulativeDiffblueTestCount" : 8,
+    "cumulativeDiffblueTestCount" : 9,
     "cumulativeManualTestCount" : 12,
-    "completeTestCount" : 8,
+    "completeTestCount" : 9,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 82,
@@ -49,17 +49,17 @@
       "T012" : 1
     },
     "perTestOutcome" : {
-      "R000" : 8
+      "R000" : 9
     },
     "perTestValidation" : {
-      "V000" : 8,
+      "V000" : 9,
       "V003" : 16
     }
   },
   "classes" : {
     "com.symphony.bdk.template.freemarker.FreeMarkerEngine" : {
       "methodsCount" : 6,
-      "completeTestCount" : 6,
+      "completeTestCount" : 7,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 3,
@@ -74,7 +74,7 @@
         "T012" : 1
       },
       "perTestOutcome" : {
-        "R000" : 6
+        "R000" : 7
       }
     },
     "com.symphony.bdk.template.freemarker.FreeMarkerTemplate" : {
@@ -133,12 +133,12 @@
       ]
     },
     "com.symphony.bdk.template.freemarker.FreeMarkerEngine.newTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 4,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 4
       },
       "lineNumbers" : [
         48,

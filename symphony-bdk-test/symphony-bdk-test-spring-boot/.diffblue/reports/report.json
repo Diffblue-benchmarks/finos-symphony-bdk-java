@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "creationTimestamp" : "2025-10-15T18:26:34.140977856Z",
     "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
-    "totalTime" : 399.061,
+    "totalTime" : 418.842,
     "environmentDetectionTime" : 0.05,
-    "indexingTime" : 0.432,
-    "entryPointsTime" : 0.038,
-    "generationTime" : 2958.044,
-    "timeToFirstTest" : 6403.699,
-    "timeToLastTest" : 5098.789,
-    "indexQueryTime" : 5.021,
-    "verificationTime" : 105.518,
-    "validationTime" : 113.687
+    "indexingTime" : 0.414,
+    "entryPointsTime" : 0.036,
+    "generationTime" : 3041.968,
+    "timeToFirstTest" : 6667.263,
+    "timeToLastTest" : 5286.635,
+    "indexQueryTime" : 5.1930000000000005,
+    "verificationTime" : 111.583,
+    "validationTime" : 119.419
   },
   "codes" : {
     "R000" : "Success",

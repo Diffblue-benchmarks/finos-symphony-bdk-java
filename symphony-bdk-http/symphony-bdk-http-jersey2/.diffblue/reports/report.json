@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "creationTimestamp" : "2025-10-15T18:26:34.140977856Z",
     "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
-    "totalTime" : 394.738,
-    "environmentDetectionTime" : 0.189,
-    "indexingTime" : 0.389,
-    "entryPointsTime" : 0.178,
-    "generationTime" : 2300.801,
-    "timeToFirstTest" : 3305.856,
-    "timeToLastTest" : 3043.77,
-    "indexQueryTime" : 6.554,
-    "verificationTime" : 72.042,
-    "validationTime" : 79.107
+    "totalTime" : 414.518,
+    "environmentDetectionTime" : 0.229,
+    "indexingTime" : 0.369,
+    "entryPointsTime" : 0.218,
+    "generationTime" : 2361.519,
+    "timeToFirstTest" : 3426.075,
+    "timeToLastTest" : 3143.033,
+    "indexQueryTime" : 6.925,
+    "verificationTime" : 76.449,
+    "validationTime" : 84.646
   },
   "codes" : {
     "R000" : "Success",
@@ -34,9 +34,9 @@
   "summary" : {
     "classesCount" : 6,
     "methodsCount" : 53,
-    "cumulativeDiffblueTestCount" : 85,
+    "cumulativeDiffblueTestCount" : 84,
     "cumulativeManualTestCount" : 3,
-    "completeTestCount" : 86,
+    "completeTestCount" : 85,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 743,
@@ -58,17 +58,17 @@
       "T023" : 1
     },
     "perTestOutcome" : {
-      "R000" : 86
+      "R000" : 85
     },
     "perTestValidation" : {
-      "V000" : 86,
+      "V000" : 85,
       "V003" : 16
     }
   },
   "classes" : {
     "com.symphony.bdk.http.jersey2.ApiClientBuilderJersey2" : {
       "methodsCount" : 19,
-      "completeTestCount" : 24,
+      "completeTestCount" : 23,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 17,
@@ -78,7 +78,7 @@
         "R000" : 19
       },
       "perTestOutcome" : {
-        "R000" : 24
+        "R000" : 23
       }
     },
     "com.symphony.bdk.http.jersey2.ApiClientBuilderProviderJersey2" : {
@@ -248,12 +248,12 @@
       ]
     },
     "com.symphony.bdk.http.jersey2.ApiClientBuilderJersey2.createClientConfig:(Ljavax/net/ssl/SSLContext;)Lorg/glassfish/jersey/client/ClientConfig;" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 2,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 2
       },
       "lineNumbers" : [
         228,

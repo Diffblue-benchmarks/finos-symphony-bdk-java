@@ -529,14 +529,18 @@ class ApiClientBuilderJersey2DiffblueTest {
   /**
    * Test {@link ApiClientBuilderJersey2#createClientConfig(SSLContext)}.
    *
+   * <ul>
+   *   <li>Then return Properties size is four.
+   * </ul>
+   *
    * <p>Method under test: {@link ApiClientBuilderJersey2#createClientConfig(SSLContext)}
    */
   @Test
-  @DisplayName("Test createClientConfig(SSLContext)")
+  @DisplayName("Test createClientConfig(SSLContext); then return Properties size is four")
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"ClientConfig ApiClientBuilderJersey2.createClientConfig(SSLContext)"})
-  void testCreateClientConfig() throws NoSuchAlgorithmException {
+  void testCreateClientConfig_thenReturnPropertiesSizeIsFour() throws NoSuchAlgorithmException {
     // Arrange
     ApiClientBuilderJersey2 apiClientBuilderJersey2 = new ApiClientBuilderJersey2();
     apiClientBuilderJersey2.withProxy("https://example.org/example", 8080);
@@ -550,39 +554,6 @@ class ApiClientBuilderJersey2DiffblueTest {
     assertEquals(4, properties.size());
     assertEquals(
         "http://https://example.org/example:8080",
-        properties.get("jersey.config.client.proxy.uri"));
-    assertEquals(4, actualCreateClientConfigResult.getPropertyNames().size());
-    assertTrue(properties.containsKey("jersey.config.apache.client.connectionManager"));
-    assertTrue(
-        properties.containsKey("jersey.config.client.httpUrlConnection.setMethodWorkaround"));
-    assertTrue(properties.containsKey("jersey.config.client.suppressHttpComplianceValidation"));
-  }
-
-  /**
-   * Test {@link ApiClientBuilderJersey2#createClientConfig(SSLContext)}.
-   *
-   * <p>Method under test: {@link ApiClientBuilderJersey2#createClientConfig(SSLContext)}
-   */
-  @Test
-  @DisplayName("Test createClientConfig(SSLContext)")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"ClientConfig ApiClientBuilderJersey2.createClientConfig(SSLContext)"})
-  void testCreateClientConfig2() throws NoSuchAlgorithmException {
-    // Arrange
-    ApiClientBuilderJersey2 apiClientBuilderJersey2 = new ApiClientBuilderJersey2();
-    apiClientBuilderJersey2.withTemporaryFolderPath("https://example.org/example");
-    apiClientBuilderJersey2.withProxy("https://example.org/example", 60000);
-
-    // Act
-    ClientConfig actualCreateClientConfigResult =
-        apiClientBuilderJersey2.createClientConfig(SSLContext.getDefault());
-
-    // Assert
-    Map<String, Object> properties = actualCreateClientConfigResult.getProperties();
-    assertEquals(4, properties.size());
-    assertEquals(
-        "http://https://example.org/example:60000",
         properties.get("jersey.config.client.proxy.uri"));
     assertEquals(4, actualCreateClientConfigResult.getPropertyNames().size());
     assertTrue(properties.containsKey("jersey.config.apache.client.connectionManager"));

@@ -4,18 +4,18 @@
   },
   "run" : {
     "version" : "2025.09.01-44e352d-licensed",
-    "creationTimestamp" : "2025-10-02T14:17:03.936197694Z",
+    "creationTimestamp" : "2025-10-15T18:26:34.140977856Z",
     "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
-    "totalTime" : 615.128,
-    "environmentDetectionTime" : 0.409,
-    "indexingTime" : 0.37,
-    "entryPointsTime" : 0.282,
-    "generationTime" : 291.096,
-    "timeToFirstTest" : 152.803,
-    "timeToLastTest" : 445.122,
-    "indexQueryTime" : 8.783,
-    "verificationTime" : 18.599,
-    "validationTime" : 129.681
+    "totalTime" : 651.582,
+    "environmentDetectionTime" : 0.442,
+    "indexingTime" : 0.348,
+    "entryPointsTime" : 0.275,
+    "generationTime" : 300.653,
+    "timeToFirstTest" : 160.915,
+    "timeToLastTest" : 463.068,
+    "indexQueryTime" : 9.486,
+    "verificationTime" : 20.29,
+    "validationTime" : 146.587
   },
   "codes" : {
     "R000" : "Success",
@@ -35,9 +35,9 @@
   "summary" : {
     "classesCount" : 22,
     "methodsCount" : 111,
-    "cumulativeDiffblueTestCount" : 39,
+    "cumulativeDiffblueTestCount" : 41,
     "cumulativeManualTestCount" : 29,
-    "completeTestCount" : 51,
+    "completeTestCount" : 53,
     "incompleteTestCount" : 0,
     "skeletonTestCount" : 0,
     "totalPhysicalLineCount" : 497,
@@ -61,10 +61,10 @@
       "W002" : 2
     },
     "perTestOutcome" : {
-      "R000" : 51
+      "R000" : 53
     },
     "perTestValidation" : {
-      "V000" : 35,
+      "V000" : 37,
       "V003" : 16
     },
     "warnings" : {
@@ -321,7 +321,7 @@
     },
     "com.symphony.bdk.app.spring.filter.TracingFilter" : {
       "methodsCount" : 3,
-      "completeTestCount" : 3,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : {
         "T000" : 1,
@@ -334,7 +334,7 @@
         "T023" : 1
       },
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 5
       }
     },
     "com.symphony.bdk.app.spring.properties.AppAuthProperties" : {
@@ -1229,12 +1229,12 @@
       ]
     },
     "com.symphony.bdk.app.spring.filter.TracingFilter.doFilter:(Ljakarta/servlet/ServletRequest;Ljakarta/servlet/ServletResponse;Ljakarta/servlet/FilterChain;)V" : {
-      "completeTestCount" : 3,
+      "completeTestCount" : 5,
       "incompleteTestCount" : 0,
       "perMethodTestability" : "T000",
       "perMethodOutcome" : "R000",
       "perTestOutcome" : {
-        "R000" : 3
+        "R000" : 5
       },
       "lineNumbers" : [
         26,

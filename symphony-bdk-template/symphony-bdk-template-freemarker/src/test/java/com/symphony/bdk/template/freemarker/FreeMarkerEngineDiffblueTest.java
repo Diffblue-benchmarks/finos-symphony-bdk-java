@@ -14,7 +14,7 @@ class FreeMarkerEngineDiffblueTest {
    * Test {@link FreeMarkerEngine#newTemplateFromFile(String)}.
    *
    * <ul>
-   *   <li>When {@code 42Template Path}.
+   *   <li>When {@code Template PathTemplate Path}.
    *   <li>Then throw {@link TemplateException}.
    * </ul>
    *
@@ -22,17 +22,17 @@ class FreeMarkerEngineDiffblueTest {
    */
   @Test
   @DisplayName(
-      "Test newTemplateFromFile(String); when '42Template Path'; then throw TemplateException")
+      "Test newTemplateFromFile(String); when 'Template PathTemplate Path'; then throw TemplateException")
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({
     "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromFile(String)"
   })
-  void testNewTemplateFromFile_when42TemplatePath_thenThrowTemplateException() {
+  void testNewTemplateFromFile_whenTemplatePathTemplatePath_thenThrowTemplateException() {
     // Arrange, Act and Assert
     assertThrows(
         TemplateException.class,
-        () -> new FreeMarkerEngine().newTemplateFromFile("42Template Path"));
+        () -> new FreeMarkerEngine().newTemplateFromFile("Template PathTemplate Path"));
   }
 
   /**
@@ -81,6 +81,32 @@ class FreeMarkerEngineDiffblueTest {
     assertThrows(
         TemplateException.class,
         () -> new FreeMarkerEngine().newTemplateFromClasspath("Template Path"));
+  }
+
+  /**
+   * Test {@link FreeMarkerEngine#newTemplateFromClasspath(String)}.
+   *
+   * <ul>
+   *   <li>When {@code Unable to load template from classpath/}.
+   * </ul>
+   *
+   * <p>Method under test: {@link FreeMarkerEngine#newTemplateFromClasspath(String)}
+   */
+  @Test
+  @DisplayName(
+      "Test newTemplateFromClasspath(String); when 'Unable to load template from classpath/'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromClasspath(String)"
+  })
+  void testNewTemplateFromClasspath_whenUnableToLoadTemplateFromClasspath() {
+    // Arrange, Act and Assert
+    assertThrows(
+        TemplateException.class,
+        () ->
+            new FreeMarkerEngine()
+                .newTemplateFromClasspath("Unable to load template from classpath/"));
   }
 
   /**
