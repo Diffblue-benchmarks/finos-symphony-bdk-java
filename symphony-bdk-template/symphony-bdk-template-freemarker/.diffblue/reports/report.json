@@ -1,0 +1,200 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-10-30T16:42:56.636491289Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 144.119,
+    "environmentDetectionTime" : 0.322,
+    "indexingTime" : 0.334,
+    "entryPointsTime" : 0.313,
+    "generationTime" : 1174.605,
+    "timeToFirstTest" : 1755.162,
+    "timeToLastTest" : 1619.038,
+    "indexQueryTime" : 3.3970000000000002,
+    "verificationTime" : 64.75,
+    "validationTime" : 22.638
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 2,
+    "methodsCount" : 8,
+    "cumulativeDiffblueTestCount" : 5,
+    "cumulativeManualTestCount" : 12,
+    "completeTestCount" : 5,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 82,
+    "perMethodTestability" : {
+      "T000" : 4,
+      "T003" : 1,
+      "T005" : 2,
+      "T012" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 1,
+      "R002" : 2,
+      "R013" : 3,
+      "T003" : 1,
+      "T012" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 5
+    },
+    "perTestValidation" : {
+      "V000" : 5
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R002" : 1,
+        "R013" : 3,
+        "T003" : 1,
+        "T012" : 1
+      }
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerTemplate" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 5
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.createConfiguration:()Lfreemarker/template/Configuration;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.lambda$createConfiguration$0:(Lfreemarker/ext/beans/BeansWrapper$MethodAppearanceDecisionInput;Lfreemarker/ext/beans/BeansWrapper$MethodAppearanceDecision;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        78
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.newTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.newTemplateFromFile:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerEngine.newTemplateFromString:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        62,
+        63,
+        64,
+        65
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerTemplate.<init>:(Lfreemarker/template/Template;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        21,
+        22,
+        23
+      ]
+    },
+    "com.symphony.bdk.template.freemarker.FreeMarkerTemplate.process:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 5,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 5
+      },
+      "lineNumbers" : [
+        36,
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  }
+}

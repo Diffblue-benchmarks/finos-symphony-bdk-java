@@ -1,0 +1,149 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-10-30T16:42:56.636491289Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 92.073,
+    "environmentDetectionTime" : 0.269,
+    "indexingTime" : 0.35,
+    "entryPointsTime" : 0.261,
+    "generationTime" : 1463.877,
+    "timeToFirstTest" : 2576.013,
+    "timeToLastTest" : 2213.309,
+    "indexQueryTime" : 5.082,
+    "verificationTime" : 79.199,
+    "validationTime" : 26.356
+  },
+  "codes" : {
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T006" : "Main method",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 1,
+    "methodsCount" : 6,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 51,
+    "perMethodTestability" : {
+      "T003" : 1,
+      "T005" : 1,
+      "T006" : 1,
+      "T012" : 3
+    },
+    "perMethodOutcome" : {
+      "T003" : 1,
+      "T005" : 1,
+      "T006" : 1,
+      "T012" : 3
+    },
+    "perTestValidation" : {
+      "V000" : 1
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.examples.GroupExtensionExample" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 3
+      },
+      "perMethodOutcome" : {
+        "T003" : 1,
+        "T005" : 1,
+        "T006" : 1,
+        "T012" : 3
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.examples.GroupExtensionExample.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        31
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "T005",
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.getGroup:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Ljava/lang/String;)Ljava/util/Optional;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        72,
+        73,
+        74
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.lambda$main$0:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Lcom/symphony/bdk/core/SymphonyBdk;Lcom/symphony/bdk/core/activity/command/CommandContext;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        45,
+        46,
+        47,
+        48,
+        46,
+        49
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.lambda$main$1:(Lcom/symphony/bdk/ext/group/SymphonyGroupService;Lcom/symphony/bdk/core/SymphonyBdk;Lcom/symphony/bdk/core/activity/command/CommandContext;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        54,
+        55,
+        57,
+        59,
+        60,
+        61,
+        63,
+        65
+      ]
+    },
+    "com.symphony.bdk.examples.GroupExtensionExample.main:([Ljava/lang/String;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T006",
+      "perMethodOutcome" : "T006",
+      "lineNumbers" : [
+        35,
+        36,
+        37,
+        38,
+        41,
+        44,
+        52,
+        67,
+        68
+      ]
+    }
+  }
+}

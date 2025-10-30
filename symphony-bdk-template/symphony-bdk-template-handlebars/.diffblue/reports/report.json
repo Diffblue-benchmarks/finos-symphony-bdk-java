@@ -1,0 +1,193 @@
+{
+  "meta" : {
+    "reportVersion" : "2.6"
+  },
+  "run" : {
+    "version" : "2025.02.02-08b2a5a-licensed",
+    "creationTimestamp" : "2025-10-30T16:42:56.636491289Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 115.122,
+    "environmentDetectionTime" : 0.16,
+    "indexingTime" : 0.34,
+    "entryPointsTime" : 0.157,
+    "generationTime" : 1207.686,
+    "timeToFirstTest" : 1980.694,
+    "timeToLastTest" : 1757.949,
+    "indexQueryTime" : 2.569,
+    "verificationTime" : 65.976,
+    "validationTime" : 23.026
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "T012" : "Synthetic method",
+    "V000" : "Validated successfully"
+  },
+  "summary" : {
+    "classesCount" : 2,
+    "methodsCount" : 8,
+    "cumulativeDiffblueTestCount" : 2,
+    "cumulativeManualTestCount" : 5,
+    "completeTestCount" : 2,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 68,
+    "perMethodTestability" : {
+      "T000" : 4,
+      "T003" : 1,
+      "T005" : 2,
+      "T012" : 1
+    },
+    "perMethodOutcome" : {
+      "R000" : 2,
+      "R002" : 2,
+      "R013" : 2,
+      "T003" : 1,
+      "T012" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 2
+    },
+    "perTestValidation" : {
+      "V000" : 2
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine" : {
+      "methodsCount" : 6,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 1,
+        "T005" : 1,
+        "T012" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "R013" : 2,
+        "T003" : 1,
+        "T012" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.<clinit>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T012",
+      "perMethodOutcome" : "T012",
+      "lineNumbers" : [
+        29
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.createHandlebars:(Lcom/github/jknack/handlebars/io/TemplateLoader;)Lcom/github/jknack/handlebars/Handlebars;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        78,
+        79,
+        80
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        53,
+        54,
+        55
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromFile:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        36,
+        37,
+        39,
+        41,
+        42,
+        43
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromString:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        65,
+        66,
+        67
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate.<init>:(Lcom/github/jknack/handlebars/Template;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        19,
+        20,
+        21
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate.process:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30,
+        31
+      ]
+    }
+  }
+}
