@@ -8,5 +8,11 @@ description = 'Symphony Java BDK Core - Extension API'
 dependencies {
 
     api 'org.apiguardian:apiguardian-api'
-
+    // 'dcover create --preflight' picks the wrong version of mockito and junit-jupiter-engine here so they've been
+    // manually set to the  correct version
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+    testImplementation("org.mockito:mockito-core:5.11.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.11.0")
+    compileOnly("com.diffblue.cover:cover-annotations:1.7.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.7.0")
 }

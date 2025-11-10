@@ -23,4 +23,10 @@ dependencies {
     testImplementation 'org.mock-server:mockserver-netty'
     testImplementation 'org.mockito:mockito-core'
     testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation("org.springframework:spring-test:6.1.15")
+    testImplementation("org.springframework.boot:spring-boot-test:3.3.6")
+    implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    testImplementation("io.projectreactor:reactor-test:3.6.12")
+    compileOnly("com.diffblue.cover:cover-annotations:1.7.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.7.0")
 }
