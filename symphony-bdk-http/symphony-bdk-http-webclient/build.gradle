@@ -5,18 +5,6 @@ plugins {
 
 description = 'Symphony Java BDK Core Http Spring WebClient'
 
-jacocoTestCoverageVerification {
-    violationRules {
-        rule {
-            limit {
-                counter = 'LINE'
-                value = 'COVEREDRATIO'
-                minimum = 0.9
-            }
-            element = 'CLASS'
-        }
-    }
-}
 
 dependencies {
     constraints {

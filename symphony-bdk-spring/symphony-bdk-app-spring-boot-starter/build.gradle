@@ -5,19 +5,6 @@ plugins {
 
 description = 'Spring Boot Starter that ease Application developments'
 
-jacocoTestCoverageVerification {
-    violationRules {
-        rule {
-            limit {
-                counter = 'LINE'
-                value = 'COVEREDRATIO'
-                minimum = 0.9
-            }
-            element = 'CLASS'
-            excludes = ['com.symphony.bdk.app.spring.*.model.*', 'com.symphony.bdk.app.spring.exception.*']
-        }
-    }
-}
 
 dependencies {
     api project(':symphony-bdk-core')

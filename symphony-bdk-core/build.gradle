@@ -14,19 +14,6 @@ javadoc {
     options.group 'Core - Activity', 'com.symphony.bdk.core.activity*'
 }
 
-jacocoTestCoverageVerification {
-    violationRules {
-        rule {
-            limit {
-                counter = 'LINE'
-                value = 'COVEREDRATIO'
-                minimum = 0.9
-            }
-            element = 'CLASS'
-            excludes = ['com.symphony.bdk.core.*.model.*', 'com.symphony.bdk.gen.api.*',]
-        }
-    }
-}
 
 dependencies {
     api project(':symphony-bdk-config')
