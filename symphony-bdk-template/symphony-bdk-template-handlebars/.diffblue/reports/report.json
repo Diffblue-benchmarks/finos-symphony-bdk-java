@@ -1,0 +1,1834 @@
+{
+  "meta" : {
+    "reportVersion" : "2.8"
+  },
+  "run" : {
+    "version" : "2025.11.01-3385b9f-licensed",
+    "creationTimestamp" : "2025-11-12T08:44:24.665788007Z",
+    "command" : "dcover create --exclude-modules=symphony-bdk-bom --coverage-reports --upload http://localhost:8080 --project-name finos-symphony-bdk-java --name with-diffblue-tests",
+    "totalTime" : 190.635,
+    "environmentDetectionTime" : 0.145,
+    "indexingTime" : 0.353,
+    "entryPointsTime" : 0.134,
+    "generationTime" : 1793.538,
+    "timeToFirstTest" : 2975.077,
+    "timeToLastTest" : 2228.064,
+    "indexQueryTime" : 0.643,
+    "verificationTime" : 77.8,
+    "validationTime" : 102.827
+  },
+  "codes" : {
+    "R000" : "Success",
+    "R002" : "Missing observers",
+    "R013" : "No inputs found that don't throw a trivial exception",
+    "T000" : "Method eligible for test creation",
+    "T003" : "Private method",
+    "T005" : "Trivial constructor",
+    "V000" : "Validated successfully",
+    "V003" : "Tests discarded during validation"
+  },
+  "summary" : {
+    "classesCount" : 2,
+    "methodsCount" : 7,
+    "cumulativeDiffblueTestCount" : 3,
+    "cumulativeManualTestCount" : 5,
+    "completeTestCount" : 3,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 68,
+    "perMethodTestability" : {
+      "T000" : 4,
+      "T003" : 1,
+      "T005" : 2
+    },
+    "perMethodOutcome" : {
+      "R000" : 2,
+      "R002" : 2,
+      "R013" : 2,
+      "T003" : 1
+    },
+    "perTestOutcome" : {
+      "R000" : 3
+    },
+    "perTestValidation" : {
+      "V000" : 3,
+      "V003" : 16
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine" : {
+      "methodsCount" : 5,
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 3,
+        "T003" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1,
+        "R013" : 2,
+        "T003" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 2
+      }
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate" : {
+      "methodsCount" : 2,
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T000" : 1,
+        "T005" : 1
+      },
+      "perMethodOutcome" : {
+        "R000" : 1,
+        "R002" : 1
+      },
+      "perTestOutcome" : {
+        "R000" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.<init>:()V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        24
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.createHandlebars:(Lcom/github/jknack/handlebars/io/TemplateLoader;)Lcom/github/jknack/handlebars/Handlebars;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T003",
+      "perMethodOutcome" : "T003",
+      "lineNumbers" : [
+        78,
+        79,
+        80
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromClasspath:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        53,
+        54,
+        55
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromFile:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R013",
+      "lineNumbers" : [
+        36,
+        37,
+        39,
+        41,
+        42,
+        43
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsEngine.newTemplateFromString:(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;" : {
+      "completeTestCount" : 2,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 2
+      },
+      "lineNumbers" : [
+        65,
+        66,
+        67
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate.<init>:(Lcom/github/jknack/handlebars/Template;)V" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T005",
+      "perMethodOutcome" : "R002",
+      "lineNumbers" : [
+        19,
+        20,
+        21
+      ]
+    },
+    "com.symphony.bdk.template.handlebars.HandlebarsTemplate.process:(Ljava/lang/Object;)Ljava/lang/String;" : {
+      "completeTestCount" : 1,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T000",
+      "perMethodOutcome" : "R000",
+      "perTestOutcome" : {
+        "R000" : 1
+      },
+      "lineNumbers" : [
+        29,
+        30,
+        31
+      ]
+    }
+  },
+  "validationMetrics" : { },
+  "outputCodes" : [
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppAutoConfiguration",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/properties/AppAuthProperties;",
+            "methodName" : "getAuth"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "()Ljava/util/Map;",
+            "methodName" : "getCors"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/properties/TracingProperties;",
+            "methodName" : "getTracing"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/properties/AppAuthProperties;)V",
+            "methodName" : "setAuth"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "(Ljava/util/Map;)V",
+            "methodName" : "setCors"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.SymphonyBdkAppProperties",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/properties/TracingProperties;)V",
+            "methodName" : "setTracing"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.auth.CircleOfTrustController",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/SymphonyBdkAppProperties;Lcom/symphony/bdk/app/spring/auth/service/CircleOfTrustService;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.auth.service.CircleOfTrustService",
+            "descriptor" : "(Lcom/symphony/bdk/core/auth/ExtensionAppAuthenticator;Lcom/symphony/bdk/spring/SymphonyBdkCoreProperties;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.verification.TestExecutionMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"\\nArgument(s) are different! Wanted:\\nextensionAppAuthenticatorCertImpl.authenticateExtensionApp(\\n    \\\"4cf3a15c6c80a9000417fb05eb43d0abfebbf68b8f91523fd956ea8c770a0c1c0f119f635f2554a65bd59291c35caf18d896846108347c90e3e7638a083c1e4f\\\"\\n);\\n-> at com.symphony.bdk.core.auth.impl.ExtensionAppAuthenticatorCertImpl.authenticateExtensionApp(ExtensionAppAuthenticatorCertImpl.java:52)\\nActual invocations have different arguments:\\nextensionAppAuthenticatorCertImpl.authenticateExtensionApp(\\n    \\\"62ea469613dac751414a41a4f22f47b2f49cd79ef5bc6dfae15e157a8a8dd7cc7f1245afb496c9f89fad2a2c808863eeaf509c56d3dff5dab3c942eae80e0a11\\\"\\n);\\n-> at com.symphony.bdk.app.spring.auth.service.CircleOfTrustService.authenticate(CircleOfTrustService.java:44)\\n\",\"originalClassName\":\"org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.auth.impl.ExtensionAppAuthenticatorCertImpl\",\"fileName\":\"ExtensionAppAuthenticatorCertImpl.java\",\"lineNumber\":52,\"methodName\":\"authenticateExtensionApp\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.app.spring.auth.service.CircleOfTrustServiceDiffblueTest7842529600609435400\",\"fileName\":\"CircleOfTrustServiceDiffblueTest7842529600609435400.java\",\"lineNumber\":50,\"methodName\":\"testAuthenticate_thenReturnAppTokenIsAbc123\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":true},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":77,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.commons.util.ReflectionUtils\",\"fileName\":\"ReflectionUtils.java\",\"lineNumber\":728,\"methodName\":\"invokeMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.MethodInvocation\",\"fileName\":\"MethodInvocation.java\",\"lineNumber\":60,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":131,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":156,\"methodName\":\"intercept\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":147,\"methodName\":\"interceptTestableMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":86,\"methodName\":\"interceptTestMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":103,\"methodName\":\"lambda$ofVoidMethod$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":93,\"methodName\":\"lambda$invoke$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":106,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":64,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":45,\"methodName\":\"chainAndInvoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":37,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":92,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":86,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":218,\"methodName\":\"lambda$invokeTestMethod$7\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":214,\"methodName\":\"invokeTestMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":139,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":69,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":156,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.agent.readwrite.RuntimeWrappers\",\"fileName\":\"RuntimeWrappers.java\",\"lineNumber\":203,\"methodName\":\"iterable$forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":41,\"methodName\":\"invokeAll\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":160,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.agent.readwrite.RuntimeWrappers\",\"fileName\":\"RuntimeWrappers.java\",\"lineNumber\":203,\"methodName\":\"iterable$forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":41,\"methodName\":\"invokeAll\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":160,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":35,\"methodName\":\"submit\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor\",\"fileName\":\"HierarchicalTestExecutor.java\",\"lineNumber\":57,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine\",\"fileName\":\"HierarchicalTestEngine.java\",\"lineNumber\":54,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":107,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":88,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":54,\"methodName\":\"lambda$execute$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":67,\"methodName\":\"withInterceptedStreams\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":52,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncher\",\"fileName\":\"DefaultLauncher.java\",\"lineNumber\":114,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncher\",\"fileName\":\"DefaultLauncher.java\",\"lineNumber\":86,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher\",\"fileName\":\"DefaultLauncherSession.java\",\"lineNumber\":86,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.SessionPerRequestLauncher\",\"fileName\":\"SessionPerRequestLauncher.java\",\"lineNumber\":53,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.junit5.isolation.ILauncherImpl\",\"fileName\":\"ILauncherImpl.java\",\"lineNumber\":39,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.l.a.c\",\"fileName\":\"SourceFile\",\"lineNumber\":147,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.m.c.f\",\"fileName\":\"SourceFile\",\"lineNumber\":83,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.CompletableFuture$AsyncSupply\",\"fileName\":\"CompletableFuture.java\",\"lineNumber\":1768,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.ThreadPoolExecutor\",\"fileName\":\"ThreadPoolExecutor.java\",\"lineNumber\":1136,\"methodName\":\"runWorker\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.ThreadPoolExecutor$Worker\",\"fileName\":\"ThreadPoolExecutor.java\",\"lineNumber\":635,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.Thread\",\"fileName\":\"Thread.java\",\"lineNumber\":840,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false}]},\"testClassJavaCode\":\"File /tmp/CircleOfTrustServiceDiffblueTest7842529600609435400.java, 55 lines:\\n   1: package com.symphony.bdk.app.spring.auth.service;\\n   2: \\n   3: import static org.junit.jupiter.api.Assertions.assertEquals;\\n   4: import static org.mockito.Mockito.mock;\\n   5: import static org.mockito.Mockito.verify;\\n   6: import static org.mockito.Mockito.when;\\n   7: import com.diffblue.cover.annotations.ManagedByDiffblue;\\n   8: import com.diffblue.cover.annotations.MethodsUnderTest;\\n   9: import com.symphony.bdk.app.spring.auth.model.AppToken;\\n  10: import com.symphony.bdk.core.auth.exception.AuthUnauthorizedException;\\n  11: import com.symphony.bdk.core.auth.impl.AppAuthSessionCertImpl;\\n  12: import com.symphony.bdk.core.auth.impl.ExtensionAppAuthenticatorCertImpl;\\n  13: import com.symphony.bdk.core.config.model.BdkRetryConfig;\\n  14: import com.symphony.bdk.spring.SymphonyBdkCoreProperties;\\n  15: import org.junit.jupiter.api.DisplayName;\\n  16: import org.junit.jupiter.api.Tag;\\n  17: import org.junit.jupiter.api.Test;\\n  18: import org.mockito.Mockito;\\n  19: \\n  20: class CircleOfTrustServiceDiffblueTest7842529600609435400 {\\n  21:   /**\\n  22:    * Test {@link CircleOfTrustService#authenticate()}.\\n  23:    *\\n  24:    * <ul>\\n  25:    *   <li>Then return appToken is {@code ABC123}.\\n  26:    * </ul>\\n  27:    *\\n  28:    * <p>Method under test: {@link CircleOfTrustService#authenticate()}\\n  29:    */\\n  30:   @Test\\n  31:   @DisplayName(\\\"Test authenticate(); then return appToken is 'ABC123'\\\")\\n  32:   @Tag(\\\"ContributionFromDiffblue\\\")\\n  33:   @ManagedByDiffblue\\n  34:   @MethodsUnderTest({\\\"AppToken CircleOfTrustService.authenticate()\\\"})\\n  35:   void testAuthenticate_thenReturnAppTokenIsAbc123() throws AuthUnauthorizedException {\\n  36:     // Arrange\\n  37:     ExtensionAppAuthenticatorCertImpl authenticator = mock(ExtensionAppAuthenticatorCertImpl.class);\\n  38:     ExtensionAppAuthenticatorCertImpl authenticator2 =\\n  39:         new ExtensionAppAuthenticatorCertImpl(new BdkRetryConfig(), \\\"42\\\", null);\\n  40:     when(authenticator.authenticateExtensionApp(Mockito.<String>any()))\\n  41:         .thenReturn(new AppAuthSessionCertImpl(authenticator2, \\\"ABC123\\\"));\\n  42:     CircleOfTrustService circleOfTrustService =\\n  43:         new CircleOfTrustService(authenticator, new SymphonyBdkCoreProperties());\\n  44: \\n  45:     // Act\\n  46:     AppToken actualAuthenticateResult = circleOfTrustService.authenticate();\\n  47: \\n  48:     // Assert\\n  49:     verify(authenticator)\\n  50:         .authenticateExtensionApp(\\n  51:             \\\"4cf3a15c6c80a9000417fb05eb43d0abfebbf68b8f91523fd956ea8c770a0c1c0f119f635f2554a65bd59291c35caf18d896846108347c90e3e7638a083c1e4f\\\");\\n  52:     assertEquals(\\\"ABC123\\\", actualAuthenticateResult.appToken());\\n  53:   }\\n  54: }\\n  55: \\nTest execution failed for method com.symphony.bdk.app.spring.auth.service.CircleOfTrustService.authenticate\\nFailure reason: \\nArgument(s) are different! Wanted:\\nextensionAppAuthenticatorCertImpl.authenticateExtensionApp(\\n    \\\"4cf3a15c6c80a9000417fb05eb43d0abfebbf68b8f91523fd956ea8c770a0c1c0f119f635f2554a65bd59291c35caf18d896846108347c90e3e7638a083c1e4f\\\"\\n);\\n-> at com.symphony.bdk.core.auth.impl.ExtensionAppAuthenticatorCertImpl.authenticateExtensionApp(ExtensionAppAuthenticatorCertImpl.java:52)\\nActual invocations have different arguments:\\nextensionAppAuthenticatorCertImpl.authenticateExtensionApp(\\n    \\\"62ea469613dac751414a41a4f22f47b2f49cd79ef5bc6dfae15e157a8a8dd7cc7f1245afb496c9f89fad2a2c808863eeaf509c56d3dff5dab3c942eae80e0a11\\\"\\n);\\n-> at com.symphony.bdk.app.spring.auth.service.CircleOfTrustService.authenticate(CircleOfTrustService.java:44)\\n\\n\"}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.auth.service.CircleOfTrustService",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/auth/model/AppToken;",
+            "methodName" : "authenticate"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lorg/springframework/web/servlet/mvc/method/annotation/ResponseEntityExceptionHandler;\",\"simpleNames\":[\"ResponseEntityExceptionHandler\"]},\"fieldName\":\"logger\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/exception/GlobalControllerExceptionHandler;",
+            "methodName" : "globalControllerExceptionHandler"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.app.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig.class,com.symphony.bdk.app.spring.auth.service.CircleOfTrustService.class,com.symphony.bdk.spring.SymphonyBdkCoreProperties.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass1527 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig bdkExtAppControllerConfig;\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.app.spring.auth.service.CircleOfTrustService circleOfTrustService;\\n  @org.springframework.boot.test.mock.mockito.MockBean com.symphony.bdk.core.auth.ExtensionAppAuthenticator extensionAppAuthenticator;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/SymphonyBdkAppProperties;Lcom/symphony/bdk/app/spring/auth/service/CircleOfTrustService;)Lcom/symphony/bdk/app/spring/auth/CircleOfTrustController;",
+            "methodName" : "circleOfTrustController"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.app.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass1653 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig bdkExtAppControllerConfig;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppControllerConfig",
+            "descriptor" : "(Lcom/symphony/bdk/core/auth/ExtensionAppAuthenticator;Lcom/symphony/bdk/spring/SymphonyBdkCoreProperties;)Lcom/symphony/bdk/app/spring/auth/service/CircleOfTrustService;",
+            "methodName" : "circleOfTrustService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppSecurityConfig",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/SymphonyBdkAppProperties;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkExtAppTracingFilterConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.config.BdkHealthIndicatorConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppError",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/exception/BdkAppErrorCode;",
+            "methodName" : "getCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppError",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getMessage"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppError",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/exception/BdkAppErrorCode;)V",
+            "methodName" : "setCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppError",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setMessage"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppErrorCode",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getMessage"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppErrorCode",
+            "descriptor" : "()Lorg/springframework/http/HttpStatus;",
+            "methodName" : "getStatus"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppErrorCode",
+            "descriptor" : "(Ljava/lang/String;)Lcom/symphony/bdk/app/spring/exception/BdkAppErrorCode;",
+            "methodName" : "valueOf"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppErrorCode",
+            "descriptor" : "()[Lcom/symphony/bdk/app/spring/exception/BdkAppErrorCode;",
+            "methodName" : "values"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppException",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/exception/BdkAppErrorCode;",
+            "methodName" : "getErrorCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.BdkAppException",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getParams"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.exception.GlobalControllerExceptionHandler",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.filter.TracingFilter",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.AppAuthProperties",
+            "descriptor" : "()Ljava/lang/Boolean;",
+            "methodName" : "getEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.AppAuthProperties",
+            "descriptor" : "()Lcom/symphony/bdk/app/spring/properties/JwtCookieProperties;",
+            "methodName" : "getJwtCookie"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.AppAuthProperties",
+            "descriptor" : "(Ljava/lang/Boolean;)V",
+            "methodName" : "setEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.AppAuthProperties",
+            "descriptor" : "(Lcom/symphony/bdk/app/spring/properties/JwtCookieProperties;)V",
+            "methodName" : "setJwtCookie"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "()Ljava/lang/Boolean;",
+            "methodName" : "getAllowCredentials"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getAllowedHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getAllowedMethods"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getAllowedOrigins"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getExposedHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "(Ljava/lang/Boolean;)V",
+            "methodName" : "setAllowCredentials"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setAllowedHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setAllowedMethods"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setAllowedOrigins"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.CorsProperties",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setExposedHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "()Ljava/lang/Boolean;",
+            "methodName" : "getEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "()Ljava/time/Duration;",
+            "methodName" : "getMaxAge"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getSameSite"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "(Ljava/lang/Boolean;)V",
+            "methodName" : "setEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "(Ljava/time/Duration;)V",
+            "methodName" : "setMaxAge"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.JwtCookieProperties",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "setSameSite"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.TracingProperties",
+            "descriptor" : "()Ljava/lang/Boolean;",
+            "methodName" : "getEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.TracingProperties",
+            "descriptor" : "()Ljava/util/List;",
+            "methodName" : "getUrlPatterns"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.TracingProperties",
+            "descriptor" : "(Ljava/lang/Boolean;)V",
+            "methodName" : "setEnabled"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.properties.TracingProperties",
+            "descriptor" : "(Ljava/util/List;)V",
+            "methodName" : "setUrlPatterns"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.verification.TestExecutionMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"\\nUnfinished stubbing detected here:\\n-> at com.symphony.bdk.app.spring.service.SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.testDoHealthCheck_givenApiExceptionGetCodeReturnZero(SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.java:42)\\n\\nE.g. thenReturn() may be missing.\\nExamples of correct stubbing:\\n    when(mock.isOk()).thenReturn(true);\\n    when(mock.isOk()).thenThrow(exception);\\n    doThrow(exception).when(mock).someVoidMethod();\\nHints:\\n 1. missing thenReturn()\\n 2. you are trying to stub a final method, which is not supported\\n 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed\\n\",\"originalClassName\":\"org.mockito.exceptions.misusing.UnfinishedStubbingException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"java.lang.Throwable\",\"fileName\":\"Throwable.java\",\"lineNumber\":495,\"methodName\":\"toString\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.Throwable\",\"fileName\":\"Throwable.java\",\"lineNumber\":317,\"methodName\":\"<init>\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.Exception\",\"fileName\":\"Exception.java\",\"lineNumber\":103,\"methodName\":\"<init>\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.RuntimeException\",\"fileName\":\"RuntimeException.java\",\"lineNumber\":97,\"methodName\":\"<init>\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.http.api.ApiRuntimeException\",\"fileName\":\"ApiRuntimeException.java\",\"lineNumber\":21,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.app.spring.service.SymphonyBdkHealthIndicatorDiffblueTest684451640932203172\",\"fileName\":\"SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.java\",\"lineNumber\":42,\"methodName\":\"testDoHealthCheck_givenApiExceptionGetCodeReturnZero\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":true},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":77,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.commons.util.ReflectionUtils\",\"fileName\":\"ReflectionUtils.java\",\"lineNumber\":728,\"methodName\":\"invokeMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.MethodInvocation\",\"fileName\":\"MethodInvocation.java\",\"lineNumber\":60,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":131,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":156,\"methodName\":\"intercept\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":147,\"methodName\":\"interceptTestableMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.extension.TimeoutExtension\",\"fileName\":\"TimeoutExtension.java\",\"lineNumber\":86,\"methodName\":\"interceptTestMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":103,\"methodName\":\"lambda$ofVoidMethod$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":93,\"methodName\":\"lambda$invoke$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":106,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":64,\"methodName\":\"proceed\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":45,\"methodName\":\"chainAndInvoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InvocationInterceptorChain\",\"fileName\":\"InvocationInterceptorChain.java\",\"lineNumber\":37,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":92,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.execution.InterceptingExecutableInvoker\",\"fileName\":\"InterceptingExecutableInvoker.java\",\"lineNumber\":86,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":218,\"methodName\":\"lambda$invokeTestMethod$7\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":214,\"methodName\":\"invokeTestMethod\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":139,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor\",\"fileName\":\"TestMethodTestDescriptor.java\",\"lineNumber\":69,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":156,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.agent.readwrite.RuntimeWrappers\",\"fileName\":\"RuntimeWrappers.java\",\"lineNumber\":203,\"methodName\":\"iterable$forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":41,\"methodName\":\"invokeAll\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":160,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.agent.readwrite.RuntimeWrappers\",\"fileName\":\"RuntimeWrappers.java\",\"lineNumber\":203,\"methodName\":\"iterable$forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":41,\"methodName\":\"invokeAll\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":160,\"methodName\":\"lambda$executeRecursively$6\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":146,\"methodName\":\"lambda$executeRecursively$8\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.Node\",\"fileName\":\"Node.java\",\"lineNumber\":137,\"methodName\":\"around\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":144,\"methodName\":\"lambda$executeRecursively$9\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.ThrowableCollector\",\"fileName\":\"ThrowableCollector.java\",\"lineNumber\":73,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":143,\"methodName\":\"executeRecursively\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.NodeTestTask\",\"fileName\":\"NodeTestTask.java\",\"lineNumber\":100,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService\",\"fileName\":\"SameThreadHierarchicalTestExecutorService.java\",\"lineNumber\":35,\"methodName\":\"submit\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor\",\"fileName\":\"HierarchicalTestExecutor.java\",\"lineNumber\":57,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine\",\"fileName\":\"HierarchicalTestEngine.java\",\"lineNumber\":54,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":107,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":88,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":54,\"methodName\":\"lambda$execute$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":67,\"methodName\":\"withInterceptedStreams\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.EngineExecutionOrchestrator\",\"fileName\":\"EngineExecutionOrchestrator.java\",\"lineNumber\":52,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncher\",\"fileName\":\"DefaultLauncher.java\",\"lineNumber\":114,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncher\",\"fileName\":\"DefaultLauncher.java\",\"lineNumber\":86,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher\",\"fileName\":\"DefaultLauncherSession.java\",\"lineNumber\":86,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.junit.platform.launcher.core.SessionPerRequestLauncher\",\"fileName\":\"SessionPerRequestLauncher.java\",\"lineNumber\":53,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.junit5.isolation.ILauncherImpl\",\"fileName\":\"ILauncherImpl.java\",\"lineNumber\":39,\"methodName\":\"execute\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.l.a.c\",\"fileName\":\"SourceFile\",\"lineNumber\":147,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.m.c.f\",\"fileName\":\"SourceFile\",\"lineNumber\":83,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.CompletableFuture$AsyncSupply\",\"fileName\":\"CompletableFuture.java\",\"lineNumber\":1768,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.ThreadPoolExecutor\",\"fileName\":\"ThreadPoolExecutor.java\",\"lineNumber\":1136,\"methodName\":\"runWorker\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.concurrent.ThreadPoolExecutor$Worker\",\"fileName\":\"ThreadPoolExecutor.java\",\"lineNumber\":635,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.Thread\",\"fileName\":\"Thread.java\",\"lineNumber\":840,\"methodName\":\"run\",\"moduleName\":\"java.base\",\"moduleVersion\":\"17.0.16\",\"nativeMethod\":false}]},\"testClassJavaCode\":\"File /tmp/SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.java, 56 lines:\\n   1: package com.symphony.bdk.app.spring.service;\\n   2: \\n   3: import static org.mockito.Mockito.mock;\\n   4: import static org.mockito.Mockito.verify;\\n   5: import static org.mockito.Mockito.when;\\n   6: import com.diffblue.cover.annotations.ManagedByDiffblue;\\n   7: import com.diffblue.cover.annotations.MethodsUnderTest;\\n   8: import com.symphony.bdk.core.service.health.HealthService;\\n   9: import com.symphony.bdk.http.api.ApiException;\\n  10: import com.symphony.bdk.http.api.ApiRuntimeException;\\n  11: import java.util.HashMap;\\n  12: import org.junit.jupiter.api.DisplayName;\\n  13: import org.junit.jupiter.api.Tag;\\n  14: import org.junit.jupiter.api.Test;\\n  15: import org.springframework.boot.actuate.health.Health;\\n  16: import org.springframework.boot.actuate.health.Health.Builder;\\n  17: import org.springframework.boot.actuate.health.Status;\\n  18: \\n  19: class SymphonyBdkHealthIndicatorDiffblueTest684451640932203172 {\\n  20:   /**\\n  21:    * Test {@link SymphonyBdkHealthIndicator#doHealthCheck(Builder)}.\\n  22:    *\\n  23:    * <ul>\\n  24:    *   <li>Given {@link ApiException} {@link ApiException#getCode()} return zero.\\n  25:    * </ul>\\n  26:    *\\n  27:    * <p>Method under test: {@link SymphonyBdkHealthIndicator#doHealthCheck(Health.Builder)}\\n  28:    */\\n  29:   @Test\\n  30:   @DisplayName(\\\"Test doHealthCheck(Builder); given ApiException getCode() return zero\\\")\\n  31:   @Tag(\\\"ContributionFromDiffblue\\\")\\n  32:   @ManagedByDiffblue\\n  33:   @MethodsUnderTest({\\\"void SymphonyBdkHealthIndicator.doHealthCheck(Health.Builder)\\\"})\\n  34:   void testDoHealthCheck_givenApiExceptionGetCodeReturnZero() throws Exception {\\n  35:     // Arrange\\n  36:     ApiException source = mock(ApiException.class);\\n  37:     when(source.getCode()).thenReturn(0);\\n  38:     when(source.getResponseBody()).thenReturn(\\\"42\\\");\\n  39:     when(source.getResponseHeaders()).thenReturn(new HashMap<>());\\n  40: \\n  41:     HealthService healthService = mock(HealthService.class);\\n  42:     when(healthService.healthCheckExtended()).thenThrow(new ApiRuntimeException(source));\\n  43:     SymphonyBdkHealthIndicator symphonyBdkHealthIndicator =\\n  44:         new SymphonyBdkHealthIndicator(healthService);\\n  45: \\n  46:     // Act\\n  47:     symphonyBdkHealthIndicator.doHealthCheck(Health.status(new Status(\\\"Code\\\")));\\n  48: \\n  49:     // Assert\\n  50:     verify(healthService).healthCheckExtended();\\n  51:     verify(source).getCode();\\n  52:     verify(source).getResponseBody();\\n  53:     verify(source).getResponseHeaders();\\n  54:   }\\n  55: }\\n  56: \\nTest execution failed for method com.symphony.bdk.app.spring.service.SymphonyBdkHealthIndicator.doHealthCheck\\nFailure reason: \\nUnfinished stubbing detected here:\\n-> at com.symphony.bdk.app.spring.service.SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.testDoHealthCheck_givenApiExceptionGetCodeReturnZero(SymphonyBdkHealthIndicatorDiffblueTest684451640932203172.java:42)\\n\\nE.g. thenReturn() may be missing.\\nExamples of correct stubbing:\\n    when(mock.isOk()).thenReturn(true);\\n    when(mock.isOk()).thenThrow(exception);\\n    doThrow(exception).when(mock).someVoidMethod();\\nHints:\\n 1. missing thenReturn()\\n 2. you are trying to stub a final method, which is not supported\\n 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed\\n\\n\"}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.app.spring.service.SymphonyBdkHealthIndicator",
+            "descriptor" : "(Lorg/springframework/boot/actuate/health/Health$Builder;)V",
+            "methodName" : "doHealthCheck"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.SymphonyBdkAutoConfiguration",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.SymphonyBdkCoreProperties",
+            "descriptor" : "()V",
+            "methodName" : "validate"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "()V",
+            "methodName" : "afterSingletonsInstantiated"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"activityRegistry\"},{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"beanFactory\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "(Lorg/springframework/beans/factory/config/ConfigurableListableBeanFactory;)V",
+            "methodName" : "postProcessBeanFactory"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"activityRegistry\"},{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"beanFactory\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "(Lorg/springframework/beans/factory/config/ConfigurableListableBeanFactory;)V",
+            "methodName" : "postProcessBeanFactory"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"java.lang.reflect.Method.getName()\\\" because \\\"method\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.spring.annotation.SlashAnnotationProcessor\",\"fileName\":\"SlashAnnotationProcessor.java\",\"lineNumber\":170,\"methodName\":\"lambda$createSlashCommandCallback$1\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":true},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":77,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.annotation.SlashAnnotationProcessor",
+            "descriptor" : "(Ljava/lang/Object;Ljava/lang/reflect/Method;Ljava/util/Map;)Ljava/util/function/Consumer;",
+            "methodName" : "createSlashCommandCallback"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkActivityConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.TestIncompleteMessage\",\"reason\":null,\"serializableCause\":{\"cause\":null,\"message\":\"Diffblue Cover can't complete test\",\"originalClassName\":\"com.diffblue.cover.exception.BaseException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":3461,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":377,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.ae\",\"fileName\":\"SourceFile\",\"lineNumber\":100,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.af\",\"fileName\":\"SourceFile\",\"lineNumber\":161,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.ae\",\"fileName\":\"SourceFile\",\"lineNumber\":193,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":500,\"methodName\":\"r\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":164,\"methodName\":\"lambda$callWorkerThread$3\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkActivityConfig",
+            "descriptor" : "(Lcom/symphony/bdk/spring/service/BotInfoService;Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)Lcom/symphony/bdk/core/activity/ActivityRegistry;",
+            "methodName" : "activityRegistry"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"activityRegistry\"},{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;\",\"simpleNames\":[\"SlashAnnotationProcessor\"]},\"fieldName\":\"beanFactory\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkActivityConfig",
+            "descriptor" : "()Lcom/symphony/bdk/spring/annotation/SlashAnnotationProcessor;",
+            "methodName" : "slashAnnotationProcessor"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkApiClientsConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkCommonFeedConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/spring/events/RealTimeEventsDispatcher;\",\"simpleNames\":[\"RealTimeEventsDispatcher\"]},\"fieldName\":\"publisher\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkCommonFeedConfig",
+            "descriptor" : "(Lorg/springframework/context/ApplicationEventPublisher;)Lcom/symphony/bdk/spring/events/RealTimeEventsDispatcher;",
+            "methodName" : "realTimeEventsDispatcher"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkCoreConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatafeedConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.spring.config.BdkDatafeedConfig.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass3 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.spring.config.BdkDatafeedConfig bdkDatafeedConfig;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.spring.config.BdkDatafeedConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatafeedConfig",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)Lcom/symphony/bdk/spring/service/DatafeedAsyncLauncherService;",
+            "methodName" : "datafeedAsyncLauncherService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.spring.config.BdkDatafeedConfig.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass476 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.spring.config.BdkDatafeedConfig bdkDatafeedConfig;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.spring.config.BdkDatafeedConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatafeedConfig",
+            "descriptor" : "(Lcom/symphony/bdk/spring/SymphonyBdkCoreProperties;Lcom/symphony/bdk/gen/api/DatafeedApi;Lcom/symphony/bdk/core/auth/AuthSession;Lcom/symphony/bdk/core/service/datafeed/DatafeedVersion;Lcom/symphony/bdk/spring/service/BotInfoService;)Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;",
+            "methodName" : "datafeedLoop"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatahoseConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.spring.config.BdkDatahoseConfig.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass668 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.spring.config.BdkDatahoseConfig bdkDatahoseConfig;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.spring.config.BdkDatahoseConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatahoseConfig",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;Ljava/util/List;)Lcom/symphony/bdk/spring/service/DatahoseAsyncLauncherService;",
+            "methodName" : "datahoseAsyncLauncherService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.SpringBeanLookupMessage\",\"classContents\":\"package com.symphony.bdk.spring.config;\\n@org.springframework.test.context.ContextConfiguration(classes = {com.symphony.bdk.spring.config.BdkDatahoseConfig.class})\\n@org.junit.runner.RunWith(value = org.springframework.test.context.junit4.SpringRunner.class) // if JUnit 4\\n@org.junit.jupiter.api.extension.ExtendWith(value = org.springframework.test.context.junit.jupiter.SpringExtension.class) // if JUnit 5\\npublic class DiffblueFakeClass1127 {\\n  @org.springframework.beans.factory.annotation.Autowired com.symphony.bdk.spring.config.BdkDatahoseConfig bdkDatahoseConfig;\\n  @org.junit.Test // if JUnit 4\\n  @org.junit.jupiter.api.Test // if JUnit 5\\n  public void testSpringContextLoads() {}\\n}\\n\",\"missingBeans\":[\"com.symphony.bdk.spring.config.BdkDatahoseConfig\"],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkDatahoseConfig",
+            "descriptor" : "(Lcom/symphony/bdk/spring/SymphonyBdkCoreProperties;Lcom/symphony/bdk/gen/api/DatafeedApi;Lcom/symphony/bdk/core/auth/AuthSession;Lcom/symphony/bdk/spring/service/BotInfoService;)Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;",
+            "methodName" : "datahoseLoop"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkExtensionConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkOboServiceConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkRetryConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkServiceConfig",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkServiceConfig",
+            "descriptor" : "(Lcom/symphony/bdk/gen/api/SystemApi;Lcom/symphony/bdk/gen/api/SignalsApi;Lcom/symphony/bdk/core/auth/AuthSession;Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;)Lcom/symphony/bdk/core/service/health/HealthService;",
+            "methodName" : "healthService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.internalexception.UnexpectedMessage\",\"reason\":\"java.lang.NullPointerException: Cannot invoke \\\"com.symphony.bdk.http.api.ApiClient.getBasePath()\\\" because the return value of \\\"com.symphony.bdk.gen.api.SignalsApi.getApiClient()\\\" is null\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"com.symphony.bdk.http.api.ApiClient.getBasePath()\\\" because the return value of \\\"com.symphony.bdk.gen.api.SignalsApi.getApiClient()\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.signal.SignalService\",\"fileName\":\"SignalService.java\",\"lineNumber\":211,\"methodName\":\"executeAndRetry\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.signal.SignalService\",\"fileName\":\"SignalService.java\",\"lineNumber\":73,\"methodName\":\"listSignals\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.signal.SignalService\",\"fileName\":\"SignalService.java\",\"lineNumber\":103,\"methodName\":\"lambda$listAllSignals$3\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.pagination.OffsetBasedPaginatedService$PaginatedIterator\",\"fileName\":\"OffsetBasedPaginatedService.java\",\"lineNumber\":88,\"methodName\":\"fetchNewChunk\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.pagination.OffsetBasedPaginatedService$PaginatedIterator\",\"fileName\":\"OffsetBasedPaginatedService.java\",\"lineNumber\":81,\"methodName\":\"hasNext\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.Spliterators$IteratorSpliterator\",\"fileName\":\"Spliterators.java\",\"lineNumber\":1855,\"methodName\":\"tryAdvance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReferencePipeline\",\"fileName\":\"ReferencePipeline.java\",\"lineNumber\":129,\"methodName\":\"forEachWithCancel\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":527,\"methodName\":\"copyIntoWithCancel\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":513,\"methodName\":\"copyInto\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":499,\"methodName\":\"wrapAndCopyInto\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReduceOps$ReduceOp\",\"fileName\":\"ReduceOps.java\",\"lineNumber\":921,\"methodName\":\"evaluateSequential\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":234,\"methodName\":\"evaluate\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReferencePipeline\",\"fileName\":\"ReferencePipeline.java\",\"lineNumber\":682,\"methodName\":\"collect\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.e.w\",\"fileName\":\"SourceFile\",\"lineNumber\":54,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.z\",\"fileName\":\"SourceFile\",\"lineNumber\":2519,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.z\",\"fileName\":\"SourceFile\",\"lineNumber\":116,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.aa\",\"fileName\":\"SourceFile\",\"lineNumber\":76,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.r\",\"fileName\":\"SourceFile\",\"lineNumber\":107,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":703,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":700,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":674,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":545,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":287,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":224,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.h\",\"fileName\":\"SourceFile\",\"lineNumber\":85,\"methodName\":\"addAssertions\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":65,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapExceptionsInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":64,\"methodName\":\"handleException\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":26,\"methodName\":\"lambda$run$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":37,\"methodName\":\"handleThrowable\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":26,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":27,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":63,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":3343,\"methodName\":\"r\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":164,\"methodName\":\"lambda$callWorkerThread$3\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkServiceConfig",
+            "descriptor" : "(Lcom/symphony/bdk/gen/api/SignalsApi;Lcom/symphony/bdk/core/auth/AuthSession;Lcom/symphony/bdk/core/config/model/BdkConfig;)Lcom/symphony/bdk/core/service/signal/SignalService;",
+            "methodName" : "signalService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.internalexception.UnexpectedMessage\",\"reason\":\"java.lang.NullPointerException: Cannot invoke \\\"com.symphony.bdk.http.api.ApiClient.getBasePath()\\\" because the return value of \\\"com.symphony.bdk.gen.api.UserApi.getApiClient()\\\" is null\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"com.symphony.bdk.http.api.ApiClient.getBasePath()\\\" because the return value of \\\"com.symphony.bdk.gen.api.UserApi.getApiClient()\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.user.UserService\",\"fileName\":\"UserService.java\",\"lineNumber\":796,\"methodName\":\"executeAndRetry\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.user.UserService\",\"fileName\":\"UserService.java\",\"lineNumber\":282,\"methodName\":\"listUsersDetail\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.user.UserService\",\"fileName\":\"UserService.java\",\"lineNumber\":295,\"methodName\":\"lambda$listAllUsersDetail$15\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.pagination.OffsetBasedPaginatedService$PaginatedIterator\",\"fileName\":\"OffsetBasedPaginatedService.java\",\"lineNumber\":88,\"methodName\":\"fetchNewChunk\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.pagination.OffsetBasedPaginatedService$PaginatedIterator\",\"fileName\":\"OffsetBasedPaginatedService.java\",\"lineNumber\":81,\"methodName\":\"hasNext\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.Spliterators$IteratorSpliterator\",\"fileName\":\"Spliterators.java\",\"lineNumber\":1855,\"methodName\":\"tryAdvance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReferencePipeline\",\"fileName\":\"ReferencePipeline.java\",\"lineNumber\":129,\"methodName\":\"forEachWithCancel\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":527,\"methodName\":\"copyIntoWithCancel\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":513,\"methodName\":\"copyInto\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":499,\"methodName\":\"wrapAndCopyInto\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReduceOps$ReduceOp\",\"fileName\":\"ReduceOps.java\",\"lineNumber\":921,\"methodName\":\"evaluateSequential\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.AbstractPipeline\",\"fileName\":\"AbstractPipeline.java\",\"lineNumber\":234,\"methodName\":\"evaluate\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.stream.ReferencePipeline\",\"fileName\":\"ReferencePipeline.java\",\"lineNumber\":682,\"methodName\":\"collect\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.e.w\",\"fileName\":\"SourceFile\",\"lineNumber\":54,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.z\",\"fileName\":\"SourceFile\",\"lineNumber\":2519,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.z\",\"fileName\":\"SourceFile\",\"lineNumber\":116,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.aa\",\"fileName\":\"SourceFile\",\"lineNumber\":76,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.r\",\"fileName\":\"SourceFile\",\"lineNumber\":107,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":703,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.util.ArrayList\",\"fileName\":\"ArrayList.java\",\"lineNumber\":1511,\"methodName\":\"forEach\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":700,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":674,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":545,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":287,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.assertion.generator.core.j\",\"fileName\":\"SourceFile\",\"lineNumber\":224,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.h\",\"fileName\":\"SourceFile\",\"lineNumber\":85,\"methodName\":\"addAssertions\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":65,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapExceptionsInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":64,\"methodName\":\"handleException\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":26,\"methodName\":\"lambda$run$0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":37,\"methodName\":\"handleThrowable\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WrapThrowableInBaseException\",\"fileName\":\"SourceFile\",\"lineNumber\":26,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":27,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":63,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":3343,\"methodName\":\"r\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":164,\"methodName\":\"lambda$callWorkerThread$3\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.config.BdkServiceConfig",
+            "descriptor" : "(Lcom/symphony/bdk/gen/api/UserApi;Lcom/symphony/bdk/gen/api/UsersApi;Lcom/symphony/bdk/gen/api/AuditTrailApi;Lcom/symphony/bdk/core/auth/AuthSession;Lcom/symphony/bdk/core/config/model/BdkConfig;)Lcom/symphony/bdk/core/service/user/UserService;",
+            "methodName" : "userService"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.events.RealTimeEvent",
+            "descriptor" : "()Lcom/symphony/bdk/gen/api/model/V4Initiator;",
+            "methodName" : "getInitiator"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.events.RealTimeEvent",
+            "descriptor" : "()Ljava/lang/Object;",
+            "methodName" : "getSource"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.events.RealTimeEventsDispatcher",
+            "descriptor" : "(Lorg/springframework/context/ApplicationEventPublisher;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.BotInfoService",
+            "descriptor" : "()Lcom/symphony/bdk/gen/api/model/UserV2;",
+            "methodName" : "getBotInfo"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.ArrangeThrowsMessage\",\"constructingMethod\":{\"binaryClassName\":\"com.symphony.bdk.spring.service.DatafeedAsyncLauncherService\",\"descriptor\":\"(Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)V\",\"methodName\":\"<init>\"},\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatafeedAsyncLauncherService",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatafeedAsyncLauncherService",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getLoopType"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.ArrangeThrowsMessage\",\"constructingMethod\":{\"binaryClassName\":\"com.symphony.bdk.spring.service.DatafeedAsyncLauncherService\",\"descriptor\":\"(Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)V\",\"methodName\":\"<init>\"},\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatafeedAsyncLauncherService",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatafeedLoop;Ljava/util/List;)V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatafeedAsyncLauncherService",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getLoopType"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.ArrangeThrowsMessage\",\"constructingMethod\":{\"binaryClassName\":\"com.symphony.bdk.spring.service.DatahoseAsyncLauncherService\",\"descriptor\":\"(Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;Ljava/util/List;)V\",\"methodName\":\"<init>\"},\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatahoseAsyncLauncherService",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;Ljava/util/List;)V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatahoseAsyncLauncherService",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getLoopType"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.ArrangeThrowsMessage\",\"constructingMethod\":{\"binaryClassName\":\"com.symphony.bdk.spring.service.DatahoseAsyncLauncherService\",\"descriptor\":\"(Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;Ljava/util/List;)V\",\"methodName\":\"<init>\"},\"serializableCause\":{\"cause\":null,\"message\":null,\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatahoseAsyncLauncherService",
+            "descriptor" : "(Lcom/symphony/bdk/core/service/datafeed/DatahoseLoop;Ljava/util/List;)V",
+            "methodName" : "<init>"
+          },
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.DatahoseAsyncLauncherService",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getLoopType"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"com.symphony.bdk.http.api.ApiClient.getBasePath()\\\" because \\\"this.apiClient\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.datafeed.impl.DatafeedLoopV1\",\"fileName\":\"DatafeedLoopV1.java\",\"lineNumber\":64,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.core.service.datafeed.impl.DatafeedLoopV1\",\"fileName\":\"DatafeedLoopV1.java\",\"lineNumber\":55,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedConstructorAccessor120\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingConstructorAccessorImpl\",\"fileName\":\"DelegatingConstructorAccessorImpl.java\",\"lineNumber\":45,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":500,\"methodName\":\"newInstanceWithCaller\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":481,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":142,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":842,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":750,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":449,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.c\",\"fileName\":\"SourceFile\",\"lineNumber\":32,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":394,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.LoopAsyncLauncherService",
+            "descriptor" : "()V",
+            "methodName" : "start"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"java.lang.Throwable.getCause()\\\" because \\\"source\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.spring.service.LoopAsyncLauncherService\",\"fileName\":\"LoopAsyncLauncherService.java\",\"lineNumber\":55,\"methodName\":\"uncaughtException\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedMethodAccessor697\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.spring.service.LoopAsyncLauncherService",
+            "descriptor" : "(Ljava/lang/Thread;Ljava/lang/Throwable;)V",
+            "methodName" : "uncaughtException"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.NonAbstractMethodInAbstractClassMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClient",
+            "descriptor" : "()V",
+            "methodName" : "rotate"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClientBodyPart",
+            "descriptor" : "(Ljava/io/InputStream;Ljava/lang/String;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClientBodyPart",
+            "descriptor" : "()Ljava/io/InputStream;",
+            "methodName" : "getContent"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClientBodyPart",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getFilename"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.NonAbstractMethodInAbstractClassMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClientBuilder",
+            "descriptor" : "(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;",
+            "methodName" : "withConnectionPoolMax"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.NonAbstractMethodInAbstractClassMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiClientBuilder",
+            "descriptor" : "(Ljava/lang/Integer;)Lcom/symphony/bdk/http/api/ApiClientBuilder;",
+            "methodName" : "withConnectionPoolPerRoute"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiException",
+            "descriptor" : "()I",
+            "methodName" : "getCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiException",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getResponseBody"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiException",
+            "descriptor" : "()Ljava/util/Map;",
+            "methodName" : "getResponseHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiResponse",
+            "descriptor" : "()Ljava/lang/Object;",
+            "methodName" : "getData"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiResponse",
+            "descriptor" : "()Ljava/util/Map;",
+            "methodName" : "getHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiResponse",
+            "descriptor" : "()I",
+            "methodName" : "getStatusCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiRuntimeException",
+            "descriptor" : "()I",
+            "methodName" : "getCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiRuntimeException",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getResponseBody"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.ApiRuntimeException",
+            "descriptor" : "()Ljava/util/Map;",
+            "methodName" : "getResponseHeaders"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.HttpClient",
+            "descriptor" : "(Lcom/symphony/bdk/http/api/ApiClientBuilderProvider;)Lcom/symphony/bdk/http/api/HttpClient$Builder;",
+            "methodName" : "builder"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.HttpClient$Builder",
+            "descriptor" : "(Lcom/symphony/bdk/http/api/ApiClientBuilderProvider;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.TrivialConstructorMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.JSON",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.Pair",
+            "descriptor" : "(Ljava/lang/Object;)Z",
+            "methodName" : "canEqual"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.Pair",
+            "descriptor" : "(Ljava/lang/Object;)Z",
+            "methodName" : "equals"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.Pair",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getName"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.Pair",
+            "descriptor" : "()Ljava/lang/String;",
+            "methodName" : "getValue"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.SyntheticMethodMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.Pair",
+            "descriptor" : "()I",
+            "methodName" : "hashCode"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.tracing.DistributedTracingContext",
+            "descriptor" : "()V",
+            "methodName" : "clear"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.tracing.DistributedTracingContext",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "setBaseTraceId"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.tracing.DistributedTracingContext",
+            "descriptor" : "()V",
+            "methodName" : "setTraceId"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.tracing.DistributedTracingContext",
+            "descriptor" : "(Ljava/lang/String;)V",
+            "methodName" : "setTraceId"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"java.security.KeyStore.setCertificateEntry(String, java.security.cert.Certificate)\\\" because \\\"trustStore\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.http.api.util.ApiUtils\",\"fileName\":\"ApiUtils.java\",\"lineNumber\":53,\"methodName\":\"addDefaultRootCaCertificates\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"invoke0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":true},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeMethodAccessorImpl\",\"fileName\":\"NativeMethodAccessorImpl.java\",\"lineNumber\":77,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":590,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.util.ApiUtils",
+            "descriptor" : "(Ljava/security/KeyStore;)V",
+            "methodName" : "addDefaultRootCaCertificates"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":{\"cause\":null,\"message\":\"Type KeyStore not available\",\"originalClassName\":\"java.security.NoSuchAlgorithmException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"sun.security.jca.GetInstance\",\"fileName\":\"GetInstance.java\",\"lineNumber\":159,\"methodName\":\"getInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.security.Security\",\"fileName\":\"Security.java\",\"lineNumber\":676,\"methodName\":\"getImpl\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.security.KeyStore\",\"fileName\":\"KeyStore.java\",\"lineNumber\":868,\"methodName\":\"getInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedMethodAccessor268\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":842,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":624,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":394,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]},\"message\":\"Type not found\",\"originalClassName\":\"java.security.KeyStoreException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"java.security.KeyStore\",\"fileName\":\"KeyStore.java\",\"lineNumber\":871,\"methodName\":\"getInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedMethodAccessor268\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":842,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":624,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.e\",\"fileName\":\"SourceFile\",\"lineNumber\":28,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":394,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.util.ApiUtils",
+            "descriptor" : "(Ljava/security/KeyStore;)V",
+            "methodName" : "logTrustStore"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.testability.NonAbstractMethodInAbstractClassMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.api.util.TypeReference",
+            "descriptor" : "()Ljava/lang/reflect/Type;",
+            "methodName" : "getType"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.webclient.ApiClientBuilderProviderWebClient",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoMeaningfulAssertionMessage\",\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.webclient.ApiClientBuilderWebClient",
+            "descriptor" : "()Lreactor/netty/http/client/HttpClient;",
+            "methodName" : "createHttpClient"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.jersey2.ApiClientBuilderProviderJersey2",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"org.glassfish.jersey.message.internal.OutboundMessageContext.getHeaders()\\\" because \\\"this.context\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.message.internal.OutboundJaxrsResponse\",\"fileName\":\"OutboundJaxrsResponse.java\",\"lineNumber\":294,\"methodName\":\"getMetadata\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jakarta.ws.rs.core.Response\",\"fileName\":\"Response.java\",\"lineNumber\":433,\"methodName\":\"getHeaders\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.http.jersey2.ApiClientJersey2\",\"fileName\":\"ApiClientJersey2.java\",\"lineNumber\":521,\"methodName\":\"prepareDownloadFile\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedMethodAccessor448\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.jersey2.ApiClientJersey2",
+            "descriptor" : "(Ljakarta/ws/rs/core/Response;)Ljava/io/File;",
+            "methodName" : "prepareDownloadFile"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Neither the \\\"name\\\" nor \\\"streamEntity\\\" can be null. Passed values: \\\"Key\\\" \\\"null\\\"\",\"originalClassName\":\"java.lang.IllegalArgumentException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.media.multipart.file.StreamDataBodyPart\",\"fileName\":\"StreamDataBodyPart.java\",\"lineNumber\":126,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.media.multipart.file.StreamDataBodyPart\",\"fileName\":\"StreamDataBodyPart.java\",\"lineNumber\":101,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.http.jersey2.ApiClientJersey2\",\"fileName\":\"ApiClientJersey2.java\",\"lineNumber\":452,\"methodName\":\"serializeMultiPartFormDataEntity\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.http.jersey2.ApiClientJersey2\",\"fileName\":\"ApiClientJersey2.java\",\"lineNumber\":415,\"methodName\":\"serialize\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedMethodAccessor529\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingMethodAccessorImpl\",\"fileName\":\"DelegatingMethodAccessorImpl.java\",\"lineNumber\":43,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":569,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.jersey2.ApiClientJersey2",
+            "descriptor" : "(Ljava/lang/Object;Ljava/util/Map;Ljava/lang/String;)Ljakarta/ws/rs/client/Entity;",
+            "methodName" : "serialize"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.jersey2.ApiClientJersey2RequestLogFilter",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"java.util.Map.keySet()\\\" because \\\"that\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.agent.readwrite.RuntimeWrappers\",\"fileName\":\"RuntimeWrappers.java\",\"lineNumber\":1661,\"methodName\":\"map$keySet\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.internal.util.collection.GuardianStringKeyMultivaluedMap\",\"fileName\":\"GuardianStringKeyMultivaluedMap.java\",\"lineNumber\":143,\"methodName\":\"putAll\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.message.internal.OutboundMessageContext\",\"fileName\":\"OutboundMessageContext.java\",\"lineNumber\":119,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"org.glassfish.jersey.client.ClientRequest\",\"fileName\":\"ClientRequest.java\",\"lineNumber\":125,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.GeneratedConstructorAccessor104\",\"fileName\":null,\"lineNumber\":-1,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingConstructorAccessorImpl\",\"fileName\":\"DelegatingConstructorAccessorImpl.java\",\"lineNumber\":45,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":500,\"methodName\":\"newInstanceWithCaller\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":481,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":142,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":842,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":750,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":449,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.c\",\"fileName\":\"SourceFile\",\"lineNumber\":32,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":394,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.http.jersey2.ApiClientJersey2RequestLogFilter",
+            "descriptor" : "(Ljakarta/ws/rs/client/ClientRequestContext;)V",
+            "methodName" : "filter"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.freemarker.FreeMarkerEngine",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/template/freemarker/FreeMarkerTemplate;\",\"simpleNames\":[\"FreeMarkerTemplate\"]},\"fieldName\":\"template\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.freemarker.FreeMarkerTemplate",
+            "descriptor" : "(Lfreemarker/template/Template;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/template/api/TemplateResolver;\",\"simpleNames\":[\"TemplateResolver\"]},\"fieldName\":\"templateEngine\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.api.TemplateResolver",
+            "descriptor" : "(Lcom/symphony/bdk/template/api/TemplateEngine;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"No TemplateEngine implementation found in classpath. Please add a symphony-bdk-template-* (freemarker or handlebars) dependency to your project.\",\"originalClassName\":\"java.lang.IllegalStateException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.template.api.TemplateEngine\",\"fileName\":\"TemplateEngine.java\",\"lineNumber\":50,\"methodName\":\"getDefaultImplementation\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.symphony.bdk.template.api.TemplateResolver\",\"fileName\":\"TemplateResolver.java\",\"lineNumber\":21,\"methodName\":\"<init>\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeConstructorAccessorImpl\",\"fileName\":\"NativeConstructorAccessorImpl.java\",\"lineNumber\":-2,\"methodName\":\"newInstance0\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":true},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.NativeConstructorAccessorImpl\",\"fileName\":\"NativeConstructorAccessorImpl.java\",\"lineNumber\":77,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"jdk.internal.reflect.DelegatingConstructorAccessorImpl\",\"fileName\":\"DelegatingConstructorAccessorImpl.java\",\"lineNumber\":45,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":500,\"methodName\":\"newInstanceWithCaller\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Constructor\",\"fileName\":\"Constructor.java\",\"lineNumber\":481,\"methodName\":\"newInstance\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":142,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":430,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.c\",\"fileName\":\"SourceFile\",\"lineNumber\":32,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.api.TemplateResolver",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.handlebars.HandlebarsEngine",
+            "descriptor" : "()V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"Object.getClass()\\\" because \\\"obj\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":562,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.handlebars.HandlebarsEngine",
+            "descriptor" : "(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;",
+            "methodName" : "newTemplateFromClasspath"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.NoNonThrowingInputsMessage\",\"serializableCause\":{\"cause\":null,\"message\":\"Cannot invoke \\\"Object.getClass()\\\" because \\\"obj\\\" is null\",\"originalClassName\":\"java.lang.NullPointerException\",\"stackTrace\":[{\"classLoaderName\":null,\"className\":\"java.lang.reflect.Method\",\"fileName\":\"Method.java\",\"lineNumber\":562,\"methodName\":\"invoke\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":140,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.h\",\"fileName\":\"SourceFile\",\"lineNumber\":77,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.a.f\",\"fileName\":\"SourceFile\",\"lineNumber\":852,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":463,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":99,\"methodName\":\"b\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.g.d\",\"fileName\":\"SourceFile\",\"lineNumber\":51,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":368,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.tir.b.g\",\"fileName\":\"SourceFile\",\"lineNumber\":261,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.fuzztest.b.f\",\"fileName\":\"SourceFile\",\"lineNumber\":1105,\"methodName\":\"a\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.SafeTimedExecutor\",\"fileName\":\"SourceFile\",\"lineNumber\":171,\"methodName\":\"lambda$runWithLoopIterationLimit$5\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TimedCallableExecutor$CallableFuture\",\"fileName\":\"SourceFile\",\"lineNumber\":29,\"methodName\":\"executeTask\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.TaskQueueRunner\",\"fileName\":\"SourceFile\",\"lineNumber\":39,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false},{\"classLoaderName\":null,\"className\":\"com.diffblue.cover.sandbox.execution.WorkerThread\",\"fileName\":\"SourceFile\",\"lineNumber\":265,\"methodName\":\"run\",\"moduleName\":null,\"moduleVersion\":null,\"nativeMethod\":false}]}}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.handlebars.HandlebarsEngine",
+            "descriptor" : "(Ljava/lang/String;)Lcom/symphony/bdk/template/api/Template;",
+            "methodName" : "newTemplateFromFile"
+          }
+        ]
+      }
+    },
+    {
+      "baseMessage" : "{\"__type\":\"com.diffblue.cover.message.limitation.MissingObserverMessage\",\"fields\":[{\"className\":{\"descriptor\":\"Lcom/symphony/bdk/template/handlebars/HandlebarsTemplate;\",\"simpleNames\":[\"HandlebarsTemplate\"]},\"fieldName\":\"template\"}],\"serializableCause\":null}",
+      "methodGroup" : {
+        "methods" : [
+          {
+            "binaryClassName" : "com.symphony.bdk.template.handlebars.HandlebarsTemplate",
+            "descriptor" : "(Lcom/github/jknack/handlebars/Template;)V",
+            "methodName" : "<init>"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "meta" : {
+    "reportVersion" : "2.8"
+  },
+  "run" : {
+    "version" : "2025.11.01-3385b9f-licensed",
+    "creationTimestamp" : "2025-11-12T08:36:02.929719803Z",
+    "command" : "dcover coverage-reports --exclude-modules=symphony-bdk-bom",
+    "totalTime" : 44.942,
+    "environmentDetectionTime" : 19.398,
+    "indexingTime" : 0.0,
+    "entryPointsTime" : 0.0,
+    "generationTime" : 0.0,
+    "timeToFirstTest" : 44.942,
+    "timeToLastTest" : 44.942,
+    "indexQueryTime" : 0.0,
+    "verificationTime" : 0.0,
+    "validationTime" : 0.0
+  },
+  "codes" : {
+    "T010" : "Abstract or interface method"
+  },
+  "summary" : {
+    "classesCount" : 1,
+    "methodsCount" : 1,
+    "cumulativeDiffblueTestCount" : 0,
+    "cumulativeManualTestCount" : 0,
+    "completeTestCount" : 0,
+    "incompleteTestCount" : 0,
+    "skeletonTestCount" : 0,
+    "totalPhysicalLineCount" : 14,
+    "perMethodTestability" : {
+      "T010" : 1
+    },
+    "perMethodOutcome" : {
+      "T010" : 1
+    }
+  },
+  "classes" : {
+    "com.symphony.bdk.extension.BdkExtensionServiceProvider" : {
+      "methodsCount" : 1,
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : {
+        "T010" : 1
+      },
+      "perMethodOutcome" : {
+        "T010" : 1
+      }
+    }
+  },
+  "methods" : {
+    "com.symphony.bdk.extension.BdkExtensionServiceProvider.getService:()Lcom/symphony/bdk/extension/BdkExtensionService;" : {
+      "completeTestCount" : 0,
+      "incompleteTestCount" : 0,
+      "perMethodTestability" : "T010",
+      "perMethodOutcome" : "T010"
+    }
+  },
+  "validationMetrics" : { },
+  "outputCodes" : [ ]
+}
