@@ -110,48 +110,6 @@ class CircleOfTrustControllerDiffblueTest {
    * HttpServletResponse)}.
    *
    * <ul>
-   *   <li>Then status four hundred.
-   * </ul>
-   *
-   * <p>Method under test: {@link CircleOfTrustController#validateJwt(JwtInfo, HttpServletRequest,
-   * HttpServletResponse)}
-   */
-  @Test
-  @DisplayName(
-      "Test validateJwt(JwtInfo, HttpServletRequest, HttpServletResponse); then status four hundred")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "UserId CircleOfTrustController.validateJwt(JwtInfo, HttpServletRequest, HttpServletResponse)"
-  })
-  void testValidateJwt_thenStatusFourHundred() throws Exception {
-    // Arrange
-    when(circleOfTrustService.validateJwt(Mockito.<String>any())).thenReturn(new UserId(1L));
-
-    MockHttpServletRequestBuilder contentTypeResult =
-        MockMvcRequestBuilders.post("/bdk/v1/app/jwt").contentType(MediaType.APPLICATION_JSON);
-
-    JsonMapper jsonMapper = JsonMapper.builder().findAndAddModules().build();
-    String content = jsonMapper.writeValueAsString(new JwtInfo(""));
-
-    MockHttpServletRequestBuilder requestBuilder = contentTypeResult.content(content);
-
-    // Act and Assert
-    MockMvcBuilders.standaloneSetup(circleOfTrustController)
-        .setControllerAdvice(globalControllerExceptionHandler)
-        .build()
-        .perform(requestBuilder)
-        .andExpect(status().is(400))
-        .andExpect(content().contentType("application/json"))
-        .andExpect(
-            content().string("{\"code\":\"MISSING_FIELDS\",\"message\":[\"Jwt is mandatory\"]}"));
-  }
-
-  /**
-   * Test {@link CircleOfTrustController#validateJwt(JwtInfo, HttpServletRequest,
-   * HttpServletResponse)}.
-   *
-   * <ul>
    *   <li>Then status {@link StatusResultMatchers#isOk()}.
    * </ul>
    *

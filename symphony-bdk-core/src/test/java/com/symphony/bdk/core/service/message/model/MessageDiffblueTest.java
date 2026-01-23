@@ -23,8 +23,7 @@ import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.github.fge.jackson.jsonpointer.JsonPointer;
 import com.github.fge.jackson.jsonpointer.TreePointer;
 import com.github.fge.jsonpatch.AddOperation;
-import com.github.fge.jsonpatch.CopyOperation;
-import com.github.fge.jsonpatch.JsonPatch;
+import com.github.fge.jsonpatch.TestOperation;
 import com.github.fge.jsonpatch.mergepatch.JsonMergePatch;
 import com.symphony.bdk.core.auth.jwt.UserClaim;
 import com.symphony.bdk.core.config.model.BdkLoadBalancingMode;
@@ -219,28 +218,6 @@ class MessageDiffblueTest {
     MessageBuilder builderResult = Message.builder();
 
     // Act
-    MessageBuilder actualDataResult = builderResult.data(new JsonPatch(new ArrayList<>()));
-
-    // Assert
-    assertEquals("[]", builderResult.data());
-    assertSame(builderResult, actualDataResult);
-  }
-
-  /**
-   * Test MessageBuilder {@link MessageBuilder#data(Object)} with {@code Object}.
-   *
-   * <p>Method under test: {@link MessageBuilder#data(Object)}
-   */
-  @Test
-  @DisplayName("Test MessageBuilder data(Object) with 'Object'")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"MessageBuilder MessageBuilder.data(Object)"})
-  void testMessageBuilderDataWithObject3() {
-    // Arrange
-    MessageBuilder builderResult = Message.builder();
-
-    // Act
     MessageBuilder actualDataResult = builderResult.data(new BaseMessage());
 
     // Assert
@@ -260,7 +237,7 @@ class MessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"MessageBuilder MessageBuilder.data(Object)"})
-  void testMessageBuilderDataWithObject4() throws IOException {
+  void testMessageBuilderDataWithObject3() throws IOException {
     // Arrange
     MessageBuilder builderResult = Message.builder();
 
@@ -500,28 +477,27 @@ class MessageDiffblueTest {
    * Test MessageBuilder {@link MessageBuilder#data(Object)} with {@code Object}.
    *
    * <ul>
-   *   <li>Then builder data is {@code {"op":"copy","path":"","from":""}}.
+   *   <li>Then builder data is {@code {"op":"test","path":"","value":10.0}}.
    * </ul>
    *
    * <p>Method under test: {@link MessageBuilder#data(Object)}
    */
   @Test
   @DisplayName(
-      "Test MessageBuilder data(Object) with 'Object'; then builder data is '{\"op\":\"copy\",\"path\":\"\",\"from\":\"\"}'")
+      "Test MessageBuilder data(Object) with 'Object'; then builder data is '{\"op\":\"test\",\"path\":\"\",\"value\":10.0}'")
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"MessageBuilder MessageBuilder.data(Object)"})
-  void testMessageBuilderDataWithObject_thenBuilderDataIsOpCopyPathFrom() {
+  void testMessageBuilderDataWithObject_thenBuilderDataIsOpTestPathValue100() {
     // Arrange
     MessageBuilder builderResult = Message.builder();
-    JsonPointer from = JsonPointer.empty();
+    TestOperation testOperation = new TestOperation(JsonPointer.empty(), DoubleNode.valueOf(10.0d));
 
     // Act
-    MessageBuilder actualDataResult =
-        builderResult.data(new CopyOperation(from, JsonPointer.empty()));
+    MessageBuilder actualDataResult = builderResult.data(testOperation);
 
     // Assert
-    assertEquals("{\"op\":\"copy\",\"path\":\"\",\"from\":\"\"}", builderResult.data());
+    assertEquals("{\"op\":\"test\",\"path\":\"\",\"value\":10.0}", builderResult.data());
     assertSame(builderResult, actualDataResult);
   }
 
@@ -697,63 +673,6 @@ class MessageDiffblueTest {
 
     // Assert
     assertSame(builderResult, actualDataResult);
-  }
-
-  /**
-   * Test MessageBuilder {@link MessageBuilder#template(Template, Object)} with {@code template},
-   * {@code parameters}.
-   *
-   * <p>Method under test: {@link MessageBuilder#template(Template, Object)}
-   */
-  @Test
-  @DisplayName("Test MessageBuilder template(Template, Object) with 'template', 'parameters'")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"MessageBuilder MessageBuilder.template(Template, Object)"})
-  void testMessageBuilderTemplateWithTemplateParameters() {
-    // Arrange
-    MessageBuilder builderResult = Message.builder();
-
-    Template template = mock(Template.class);
-    when(template.process(Mockito.<Object>any()))
-        .thenThrow(new MessageCreationException("An error occurred"));
-
-    // Act and Assert
-    assertThrows(
-        MessageCreationException.class, () -> builderResult.template(template, "Parameters"));
-    verify(template).process(isA(Object.class));
-  }
-
-  /**
-   * Test MessageBuilder {@link MessageBuilder#template(Template, Object)} with {@code template},
-   * {@code parameters}.
-   *
-   * <ul>
-   *   <li>Then builder content is {@code Process}.
-   * </ul>
-   *
-   * <p>Method under test: {@link MessageBuilder#template(Template, Object)}
-   */
-  @Test
-  @DisplayName(
-      "Test MessageBuilder template(Template, Object) with 'template', 'parameters'; then builder content is 'Process'")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"MessageBuilder MessageBuilder.template(Template, Object)"})
-  void testMessageBuilderTemplateWithTemplateParameters_thenBuilderContentIsProcess() {
-    // Arrange
-    MessageBuilder builderResult = Message.builder();
-
-    Template template = mock(Template.class);
-    when(template.process(Mockito.<Object>any())).thenReturn("Process");
-
-    // Act
-    MessageBuilder actualTemplateResult = builderResult.template(template, "Parameters");
-
-    // Assert
-    verify(template).process(isA(Object.class));
-    assertEquals("Process", builderResult.content());
-    assertSame(builderResult, actualTemplateResult);
   }
 
   /**

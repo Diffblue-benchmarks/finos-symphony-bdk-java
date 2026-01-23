@@ -3,16 +3,16 @@
     "reportVersion" : "2.8"
   },
   "run" : {
-    "version" : "2025.11.01-3385b9f-licensed",
-    "creationTimestamp" : "2025-11-12T08:36:02.929719803Z",
+    "version" : "2026.01.01-c73dc7d-licensed",
+    "creationTimestamp" : "2026-01-23T12:33:52.050954785Z",
     "command" : "dcover coverage-reports --exclude-modules=symphony-bdk-bom",
-    "totalTime" : 44.942,
-    "environmentDetectionTime" : 19.398,
+    "totalTime" : 43.338,
+    "environmentDetectionTime" : 18.757,
     "indexingTime" : 0.0,
     "entryPointsTime" : 0.0,
     "generationTime" : 0.0,
-    "timeToFirstTest" : 44.942,
-    "timeToLastTest" : 44.942,
+    "timeToFirstTest" : 43.339,
+    "timeToLastTest" : 43.339,
     "indexQueryTime" : 0.0,
     "verificationTime" : 0.0,
     "validationTime" : 0.0

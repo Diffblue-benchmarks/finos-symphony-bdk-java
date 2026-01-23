@@ -3,48 +3,13 @@ package com.symphony.bdk.core.activity.parsing;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 class RegexCommandTokenDiffblueTest {
-  /**
-   * Test {@link RegexCommandToken#matches(Object)}.
-   *
-   * <ul>
-   *   <li>Given {@link RegexCommandToken} {@link RegexCommandToken#matches(Object)} return {@code
-   *       true}.
-   *   <li>When {@code ABC123}.
-   *   <li>Then calls {@link RegexCommandToken#matches(Object)}.
-   * </ul>
-   *
-   * <p>Method under test: {@link RegexCommandToken#matches(Object)}
-   */
-  @Test
-  @DisplayName(
-      "Test matches(Object); given RegexCommandToken matches(Object) return 'true'; when 'ABC123'; then calls matches(Object)")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"boolean RegexCommandToken.matches(Object)"})
-  void testMatches_givenRegexCommandTokenMatchesReturnTrue_whenAbc123_thenCallsMatches() {
-    // Arrange
-    RegexCommandToken regexCommandToken = mock(RegexCommandToken.class);
-    when(regexCommandToken.matches(Mockito.<Object>any())).thenReturn(true);
-
-    // Act
-    regexCommandToken.matches("ABC123");
-
-    // Assert
-    verify(regexCommandToken).matches(isA(Object.class));
-  }
-
   /**
    * Test {@link RegexCommandToken#matches(Object)}.
    *

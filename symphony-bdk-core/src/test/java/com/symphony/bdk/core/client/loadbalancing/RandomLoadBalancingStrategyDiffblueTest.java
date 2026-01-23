@@ -137,43 +137,4 @@ class RandomLoadBalancingStrategyDiffblueTest {
     // Assert that nothing has changed
     assertTrue(nodes.isEmpty());
   }
-
-  /**
-   * Test {@link RandomLoadBalancingStrategy#getNewBasePath()}.
-   *
-   * <ul>
-   *   <li>Then return {@code Scheme://localhost:8080/Context}.
-   * </ul>
-   *
-   * <p>Method under test: {@link RandomLoadBalancingStrategy#getNewBasePath()}
-   */
-  @Test
-  @DisplayName("Test getNewBasePath(); then return 'Scheme://localhost:8080/Context'")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"String RandomLoadBalancingStrategy.getNewBasePath()"})
-  void testGetNewBasePath_thenReturnSchemeLocalhost8080Context() {
-    // Arrange
-    HashMap<String, String> defaultHeaders = new HashMap<>();
-    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
-
-    BdkServerConfig bdkServerConfig = new BdkServerConfig();
-    bdkServerConfig.setConnectionPoolMax(1);
-    bdkServerConfig.setConnectionPoolPerRoute(1);
-    bdkServerConfig.setConnectionTimeout(10);
-    bdkServerConfig.setContext("Context");
-    bdkServerConfig.setDefaultHeaders(defaultHeaders);
-    bdkServerConfig.setHost("localhost");
-    bdkServerConfig.setPort(8080);
-    bdkServerConfig.setProxy(new BdkProxyConfig());
-    bdkServerConfig.setReadTimeout(10);
-    bdkServerConfig.setScheme("Scheme");
-
-    ArrayList<BdkServerConfig> nodes = new ArrayList<>();
-    nodes.add(bdkServerConfig);
-
-    // Act and Assert
-    assertEquals(
-        "Scheme://localhost:8080/Context", new RandomLoadBalancingStrategy(nodes).getNewBasePath());
-  }
 }

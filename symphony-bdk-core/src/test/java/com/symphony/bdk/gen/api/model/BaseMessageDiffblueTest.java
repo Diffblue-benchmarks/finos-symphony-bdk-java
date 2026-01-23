@@ -87,29 +87,6 @@ class BaseMessageDiffblueTest {
   @MethodsUnderTest({"boolean BaseMessage.equals(Object)", "int BaseMessage.hashCode()"})
   void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
-    Message message = new Message();
-
-    // Act and Assert
-    assertNotEquals(message, new BaseMessage());
-  }
-
-  /**
-   * Test {@link BaseMessage#equals(Object)}.
-   *
-   * <ul>
-   *   <li>When other is different.
-   *   <li>Then return not equal.
-   * </ul>
-   *
-   * <p>Method under test: {@link BaseMessage#equals(Object)}
-   */
-  @Test
-  @DisplayName("Test equals(Object); when other is different; then return not equal")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"boolean BaseMessage.equals(Object)", "int BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
-    // Arrange
     BaseMessage baseMessage = new BaseMessage();
     baseMessage.id("42");
 
@@ -132,7 +109,7 @@ class BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean BaseMessage.equals(Object)", "int BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
     BaseMessage baseMessage = new BaseMessage();
     baseMessage.timestamp("Timestamp");
@@ -156,7 +133,7 @@ class BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean BaseMessage.equals(Object)", "int BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
     BaseMessage baseMessage = new BaseMessage();
     baseMessage.messageType("Message Type");
@@ -180,7 +157,7 @@ class BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean BaseMessage.equals(Object)", "int BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
     BaseMessage baseMessage = new BaseMessage();
     baseMessage.streamId("42");

@@ -3,7 +3,6 @@ package com.symphony.bdk.http.webclient;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -34,38 +33,6 @@ import reactor.netty.transport.ProxyProvider;
 import reactor.netty.transport.ProxyProvider.TypeSpec;
 
 class ApiClientBuilderWebClientDiffblueTest {
-  /**
-   * Test new {@link ApiClientBuilderWebClient} (default constructor).
-   *
-   * <p>Method under test: default or parameterless constructor of {@link ApiClientBuilderWebClient}
-   */
-  @Test
-  @DisplayName("Test new ApiClientBuilderWebClient (default constructor)")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void ApiClientBuilderWebClient.<init>()"})
-  void testNewApiClientBuilderWebClient() {
-    // Arrange and Act
-    ApiClientBuilderWebClient actualApiClientBuilderWebClient = new ApiClientBuilderWebClient();
-
-    // Assert
-    assertEquals("", actualApiClientBuilderWebClient.basePath);
-    assertNull(actualApiClientBuilderWebClient.keyStoreBytes);
-    assertNull(actualApiClientBuilderWebClient.trustStoreBytes);
-    assertNull(actualApiClientBuilderWebClient.keyStorePassword);
-    assertNull(actualApiClientBuilderWebClient.proxyHost);
-    assertNull(actualApiClientBuilderWebClient.proxyPassword);
-    assertNull(actualApiClientBuilderWebClient.proxyUser);
-    assertNull(actualApiClientBuilderWebClient.trustStorePassword);
-    assertEquals(-1, actualApiClientBuilderWebClient.proxyPort);
-    Map<String, String> stringStringMap = actualApiClientBuilderWebClient.defaultHeaders;
-    assertEquals(1, stringStringMap.size());
-    assertEquals(15000, actualApiClientBuilderWebClient.connectionTimeout);
-    assertEquals(60000, actualApiClientBuilderWebClient.readTimeout);
-    assertTrue(stringStringMap.containsKey("User-Agent"));
-    assertTrue(actualApiClientBuilderWebClient.authentications.isEmpty());
-  }
-
   /**
    * Test {@link ApiClientBuilderWebClient#build()}.
    *

@@ -2,36 +2,14 @@ package com.symphony.bdk.core.retry;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
 import com.symphony.bdk.core.retry.resilience4j.Resilience4jRetryWithRecovery;
-import java.util.function.Predicate;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 class RetryWithRecoveryBuilderDiffblueTest {
-  /**
-   * Test new {@link RetryWithRecoveryBuilder} (default constructor).
-   *
-   * <p>Method under test: default or parameterless constructor of {@link RetryWithRecoveryBuilder}
-   */
-  @Test
-  @DisplayName("Test new RetryWithRecoveryBuilder (default constructor)")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"void RetryWithRecoveryBuilder.<init>()"})
-  void testNewRetryWithRecoveryBuilder() {
-    // Arrange and Act
-    RetryWithRecoveryBuilder<Object> actualRetryWithRecoveryBuilder =
-        new RetryWithRecoveryBuilder<>();
-
-    // Assert
-    RetryWithRecovery<Object> retryWithRecovery = actualRetryWithRecoveryBuilder.build();
-    assertTrue(retryWithRecovery instanceof Resilience4jRetryWithRecovery);
-  }
-
   /**
    * Test {@link RetryWithRecoveryBuilder#from(RetryWithRecoveryBuilder)}.
    *
@@ -85,30 +63,6 @@ class RetryWithRecoveryBuilderDiffblueTest {
     // Assert
     RetryWithRecovery<Object> retryWithRecovery = actualCopyWithoutRecoveryStrategiesResult.build();
     assertTrue(retryWithRecovery instanceof Resilience4jRetryWithRecovery);
-  }
-
-  /**
-   * Test {@link RetryWithRecoveryBuilder#ignoreException(Predicate)}.
-   *
-   * <p>Method under test: {@link RetryWithRecoveryBuilder#ignoreException(Predicate)}
-   */
-  @Test
-  @DisplayName("Test ignoreException(Predicate)")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "RetryWithRecoveryBuilder RetryWithRecoveryBuilder.ignoreException(Predicate)"
-  })
-  void testIgnoreException() {
-    // Arrange
-    RetryWithRecoveryBuilder<Object> retryWithRecoveryBuilder = new RetryWithRecoveryBuilder<>();
-
-    // Act
-    RetryWithRecoveryBuilder<Object> actualIgnoreExceptionResult =
-        retryWithRecoveryBuilder.ignoreException(mock(Predicate.class));
-
-    // Assert
-    assertSame(retryWithRecoveryBuilder, actualIgnoreExceptionResult);
   }
 
   /**

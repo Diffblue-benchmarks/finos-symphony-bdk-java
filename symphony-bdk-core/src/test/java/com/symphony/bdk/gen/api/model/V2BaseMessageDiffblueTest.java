@@ -87,29 +87,6 @@ class V2BaseMessageDiffblueTest {
   @MethodsUnderTest({"boolean V2BaseMessage.equals(Object)", "int V2BaseMessage.hashCode()"})
   void testEquals_whenOtherIsDifferent_thenReturnNotEqual() {
     // Arrange
-    ConnectionRequestMessage connectionRequestMessage = new ConnectionRequestMessage();
-
-    // Act and Assert
-    assertNotEquals(connectionRequestMessage, new V2BaseMessage());
-  }
-
-  /**
-   * Test {@link V2BaseMessage#equals(Object)}.
-   *
-   * <ul>
-   *   <li>When other is different.
-   *   <li>Then return not equal.
-   * </ul>
-   *
-   * <p>Method under test: {@link V2BaseMessage#equals(Object)}
-   */
-  @Test
-  @DisplayName("Test equals(Object); when other is different; then return not equal")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({"boolean V2BaseMessage.equals(Object)", "int V2BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
-    // Arrange
     V2BaseMessage v2BaseMessage = new V2BaseMessage();
     v2BaseMessage.id("42");
 
@@ -132,7 +109,7 @@ class V2BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean V2BaseMessage.equals(Object)", "int V2BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual2() {
     // Arrange
     V2BaseMessage v2BaseMessage = new V2BaseMessage();
     v2BaseMessage.timestamp("Timestamp");
@@ -156,7 +133,7 @@ class V2BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean V2BaseMessage.equals(Object)", "int V2BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual3() {
     // Arrange
     V2BaseMessage v2BaseMessage = new V2BaseMessage();
     v2BaseMessage.v2messageType("V2message Type");
@@ -180,7 +157,7 @@ class V2BaseMessageDiffblueTest {
   @Tag("ContributionFromDiffblue")
   @ManagedByDiffblue
   @MethodsUnderTest({"boolean V2BaseMessage.equals(Object)", "int V2BaseMessage.hashCode()"})
-  void testEquals_whenOtherIsDifferent_thenReturnNotEqual5() {
+  void testEquals_whenOtherIsDifferent_thenReturnNotEqual4() {
     // Arrange
     V2BaseMessage v2BaseMessage = new V2BaseMessage();
     v2BaseMessage.streamId("42");

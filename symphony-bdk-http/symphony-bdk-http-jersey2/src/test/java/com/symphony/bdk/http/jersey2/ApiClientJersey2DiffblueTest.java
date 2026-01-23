@@ -1,9 +1,11 @@
 package com.symphony.bdk.http.jersey2;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.eq;
@@ -14,28 +16,41 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import com.diffblue.cover.annotations.ManagedByDiffblue;
 import com.diffblue.cover.annotations.MethodsUnderTest;
+import com.symphony.bdk.http.api.ApiClientBodyPart;
 import com.symphony.bdk.http.api.ApiException;
 import com.symphony.bdk.http.api.Pair;
 import com.symphony.bdk.http.api.auth.Authentication;
 import com.symphony.bdk.http.api.util.TypeReference;
 import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.client.Invocation;
 import jakarta.ws.rs.client.Invocation.Builder;
 import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Form;
 import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.StatusType;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import org.apache.http.conn.ConnectTimeoutException;
 import org.glassfish.jersey.client.ChunkedInput;
+import org.glassfish.jersey.media.multipart.BodyPart;
+import org.glassfish.jersey.media.multipart.ContentDisposition;
+import org.glassfish.jersey.media.multipart.FormDataBodyPart;
+import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
+import org.glassfish.jersey.media.multipart.FormDataMultiPart;
+import org.glassfish.jersey.media.multipart.file.StreamDataBodyPart;
 import org.glassfish.jersey.message.internal.OutboundJaxrsResponse;
 import org.glassfish.jersey.message.internal.OutboundMessageContext;
 import org.junit.jupiter.api.DisplayName;
@@ -136,9 +151,9 @@ class ApiClientJersey2DiffblueTest {
    * String, String[], TypeReference)}.
    *
    * <ul>
-   *   <li>Given {@link Invocation.Builder} {@link Invocation.Builder#accept(String[])} throw {@link
+   *   <li>Given {@link Builder} {@link Builder#accept(String[])} throw {@link
    *       RuntimeException#RuntimeException()}.
-   *   <li>Then calls {@link Invocation.Builder#accept(String[])}.
+   *   <li>Then calls {@link Builder#accept(String[])}.
    * </ul>
    *
    * <p>Method under test: {@link ApiClientJersey2#invokeAPI(String, String, List, Object, Map, Map,
@@ -202,9 +217,9 @@ class ApiClientJersey2DiffblueTest {
    * String, String[], TypeReference)}.
    *
    * <ul>
-   *   <li>Given {@link Invocation.Builder} {@link Invocation.Builder#header(String, Object)} throw
-   *       {@link RuntimeException#RuntimeException()}.
-   *   <li>Then calls {@link Invocation.Builder#header(String, Object)}.
+   *   <li>Given {@link Builder} {@link Builder#header(String, Object)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link Builder#header(String, Object)}.
    * </ul>
    *
    * <p>Method under test: {@link ApiClientJersey2#invokeAPI(String, String, List, Object, Map, Map,
@@ -273,9 +288,9 @@ class ApiClientJersey2DiffblueTest {
    * String, String[], TypeReference)}.
    *
    * <ul>
-   *   <li>Given {@link Invocation.Builder} {@link Invocation.Builder#header(String, Object)} throw
-   *       {@link RuntimeException#RuntimeException()}.
-   *   <li>Then calls {@link Invocation.Builder#header(String, Object)}.
+   *   <li>Given {@link Builder} {@link Builder#header(String, Object)} throw {@link
+   *       RuntimeException#RuntimeException()}.
+   *   <li>Then calls {@link Builder#header(String, Object)}.
    * </ul>
    *
    * <p>Method under test: {@link ApiClientJersey2#invokeAPI(String, String, List, Object, Map, Map,
@@ -1945,6 +1960,624 @@ class ApiClientJersey2DiffblueTest {
 
     // Act and Assert
     assertFalse(apiClientJersey2.isJsonMime(null));
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName("Test serialize(Object, Map, String)")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    ArrayList<Object> objectList = new ArrayList<>();
+    objectList.add(Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile());
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", objectList);
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    Object entity2 = getResult.getEntity();
+    assertEquals("test.txt", ((File) entity2).getName());
+    Optional<String> fileName = ((FormDataBodyPart) getResult).getFileName();
+    assertEquals("test.txt", fileName.get());
+    assertEquals("test.txt", contentDisposition.getFileName());
+    assertEquals(0L, contentDisposition.getSize());
+    assertTrue(((File) entity2).isAbsolute());
+    assertTrue(fileName.isPresent());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@code A}.
+   *   <li>Then Entity BodyParts first return {@link StreamDataBodyPart}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given 'A'; then Entity BodyParts first return StreamDataBodyPart")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenA_thenEntityBodyPartsFirstReturnStreamDataBodyPart() throws IOException {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    ByteArrayInputStream content =
+        new ByteArrayInputStream(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1});
+    formParams.put("Key", new ApiClientBodyPart(content, "https://example.org/example"));
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertTrue(getResult instanceof StreamDataBodyPart);
+    Optional<String> fileName = ((StreamDataBodyPart) getResult).getFileName();
+    assertEquals("https://example.org/example", fileName.get());
+    assertEquals("https://example.org/example", contentDisposition.getFileName());
+    assertEquals("https://example.org/example", ((StreamDataBodyPart) getResult).getFilename());
+    byte[] byteArray = new byte[8];
+    assertEquals(8, ((StreamDataBodyPart) getResult).getContent().read(byteArray));
+    assertTrue(fileName.isPresent());
+    assertSame(content, getResult.getEntity());
+    assertSame(content, ((StreamDataBodyPart) getResult).getStreamEntity());
+    assertArrayEquals(new byte[] {'A', 1, 'A', 1, 'A', 1, 'A', 1}, byteArray);
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@code application/x-www-form-urlencoded}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName("Test serialize(Object, Map, String); given 'application/x-www-form-urlencoded'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenApplicationXWwwFormUrlencoded() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("application/x-www-form-urlencoded", "Value");
+    formParams.put("multipart/form-data", "Value");
+
+    // Act
+    Entity<?> actualSerializeResult =
+        apiClientJersey2.serialize("Obj", formParams, "application/x-www-form-urlencoded");
+
+    // Assert
+    assertTrue(actualSerializeResult.getEntity() instanceof Form);
+    MediaType mediaType = actualSerializeResult.getMediaType();
+    assertEquals("application", mediaType.getType());
+    assertEquals("x-www-form-urlencoded", mediaType.getSubtype());
+    assertSame(mediaType, actualSerializeResult.getVariant().getMediaType());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@code 42}.
+   *   <li>Then return Entity BodyParts first Value is {@code 42}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given ArrayList() add '42'; then return Entity BodyParts first Value is '42'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenArrayListAdd42_thenReturnEntityBodyPartsFirstValueIs42() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    ArrayList<Object> objectList = new ArrayList<>();
+    objectList.add("42");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", objectList);
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertEquals("42", ((FormDataBodyPart) getResult).getValue());
+    assertEquals("42", getResult.getEntity());
+    MediaType mediaType = getResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertNull(contentDisposition.getFileName());
+    assertFalse(((FormDataBodyPart) getResult).getFileName().isPresent());
+    assertTrue(((FormDataBodyPart) getResult).isSimple());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@link ArrayList#ArrayList()} add {@code 42}.
+   *   <li>Then return Entity BodyParts first Value is {@code 42,42}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given ArrayList() add '42'; then return Entity BodyParts first Value is '42,42'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenArrayListAdd42_thenReturnEntityBodyPartsFirstValueIs4242() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    ArrayList<Object> objectList = new ArrayList<>();
+    objectList.add("42");
+    objectList.add("42");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", objectList);
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertEquals("42,42", ((FormDataBodyPart) getResult).getValue());
+    assertEquals("42,42", getResult.getEntity());
+    MediaType mediaType = getResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertNull(contentDisposition.getFileName());
+    assertFalse(((FormDataBodyPart) getResult).getFileName().isPresent());
+    assertTrue(((FormDataBodyPart) getResult).isSimple());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@link ArrayList#ArrayList()}.
+   *   <li>Then return Entity BodyParts first Value is empty string.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given ArrayList(); then return Entity BodyParts first Value is empty string")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenArrayList_thenReturnEntityBodyPartsFirstValueIsEmptyString() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", new ArrayList<>());
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertEquals("", ((FormDataBodyPart) getResult).getValue());
+    assertEquals("", getResult.getEntity());
+    MediaType mediaType = getResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertNull(contentDisposition.getFileName());
+    assertFalse(((FormDataBodyPart) getResult).getFileName().isPresent());
+    assertTrue(((FormDataBodyPart) getResult).isSimple());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given {@code multipart/form-data}.
+   *   <li>When {@link HashMap#HashMap()} {@code multipart/form-data} is {@code Value}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given 'multipart/form-data'; when HashMap() 'multipart/form-data' is 'Value'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenMultipartFormData_whenHashMapMultipartFormDataIsValue() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("multipart/form-data", "Value");
+
+    // Act
+    Entity<?> actualSerializeResult =
+        apiClientJersey2.serialize("Obj", formParams, "application/x-www-form-urlencoded");
+
+    // Assert
+    assertTrue(actualSerializeResult.getEntity() instanceof Form);
+    MediaType mediaType = actualSerializeResult.getMediaType();
+    assertEquals("application", mediaType.getType());
+    assertEquals("x-www-form-urlencoded", mediaType.getSubtype());
+    assertSame(mediaType, actualSerializeResult.getVariant().getMediaType());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>Given Property is {@code java.io.tmpdir} is array of {@link String} with {@code test.txt}
+   *       toFile.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); given Property is 'java.io.tmpdir' is array of String with 'test.txt' toFile")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_givenPropertyIsJavaIoTmpdirIsArrayOfStringWithTestTxtToFile() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", Paths.get(System.getProperty("java.io.tmpdir"), "test.txt").toFile());
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    Object entity2 = getResult.getEntity();
+    assertEquals("test.txt", ((File) entity2).getName());
+    Optional<String> fileName = ((FormDataBodyPart) getResult).getFileName();
+    assertEquals("test.txt", fileName.get());
+    assertEquals("test.txt", contentDisposition.getFileName());
+    assertEquals(0L, contentDisposition.getSize());
+    assertTrue(((File) entity2).isAbsolute());
+    assertTrue(fileName.isPresent());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>When {@code application/x-www-form-urlencoded}.
+   *   <li>Then Entity return {@link Form}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); when 'application/x-www-form-urlencoded'; then Entity return Form")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_whenApplicationXWwwFormUrlencoded_thenEntityReturnForm() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    // Act
+    Entity<?> actualSerializeResult =
+        apiClientJersey2.serialize("Obj", new HashMap<>(), "application/x-www-form-urlencoded");
+
+    // Assert
+    assertTrue(actualSerializeResult.getEntity() instanceof Form);
+    MediaType mediaType = actualSerializeResult.getMediaType();
+    assertEquals("application", mediaType.getType());
+    assertEquals("x-www-form-urlencoded", mediaType.getSubtype());
+    assertSame(mediaType, actualSerializeResult.getVariant().getMediaType());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>When {@link HashMap#HashMap()} {@code Key} is {@code null}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName("Test serialize(Object, Map, String); when HashMap() 'Key' is 'null'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_whenHashMapKeyIsNull() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", null);
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertEquals("", ((FormDataBodyPart) getResult).getValue());
+    assertEquals("", getResult.getEntity());
+    MediaType mediaType = getResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertNull(contentDisposition.getFileName());
+    assertFalse(((FormDataBodyPart) getResult).getFileName().isPresent());
+    assertTrue(((FormDataBodyPart) getResult).isSimple());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>When {@link HashMap#HashMap()} {@code Key} is {@code Value}.
+   *   <li>Then return Entity BodyParts first Value is {@code Value}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); when HashMap() 'Key' is 'Value'; then return Entity BodyParts first Value is 'Value'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_whenHashMapKeyIsValue_thenReturnEntityBodyPartsFirstValueIsValue() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    HashMap<String, Object> formParams = new HashMap<>();
+    formParams.put("Key", "Value");
+
+    // Act and Assert
+    Object entity =
+        apiClientJersey2.serialize("Obj", formParams, "multipart/form-data").getEntity();
+    List<BodyPart> bodyParts = ((FormDataMultiPart) entity).getBodyParts();
+    assertEquals(1, bodyParts.size());
+    BodyPart getResult = bodyParts.get(0);
+    assertTrue(getResult instanceof FormDataBodyPart);
+    ContentDisposition contentDisposition = getResult.getContentDisposition();
+    assertTrue(contentDisposition instanceof FormDataContentDisposition);
+    assertTrue(entity instanceof FormDataMultiPart);
+    assertEquals("Value", ((FormDataBodyPart) getResult).getValue());
+    assertEquals("Value", getResult.getEntity());
+    MediaType mediaType = getResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertNull(contentDisposition.getFileName());
+    assertFalse(((FormDataBodyPart) getResult).getFileName().isPresent());
+    assertTrue(((FormDataBodyPart) getResult).isSimple());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>When {@link HashMap#HashMap()}.
+   *   <li>Then return MediaType Subtype is {@code form-data}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); when HashMap(); then return MediaType Subtype is 'form-data'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_whenHashMap_thenReturnMediaTypeSubtypeIsFormData() throws ParseException {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    // Act
+    Entity<?> actualSerializeResult =
+        apiClientJersey2.serialize("Obj", new HashMap<>(), "multipart/form-data");
+
+    // Assert
+    Object entity = actualSerializeResult.getEntity();
+    assertTrue(entity instanceof FormDataMultiPart);
+    MediaType mediaType = actualSerializeResult.getMediaType();
+    assertEquals("form-data", mediaType.getSubtype());
+    assertEquals("multipart", mediaType.getType());
+    assertNull(((FormDataMultiPart) entity).getProviders());
+    assertNull(((FormDataMultiPart) entity).getContentDisposition());
+    assertNull(((FormDataMultiPart) entity).getParent());
+    assertNull(((FormDataMultiPart) entity).messageBodyWorkers);
+    Map<String, String> parameters = mediaType.getParameters();
+    assertEquals(1, parameters.size());
+    assertTrue(((FormDataMultiPart) entity).getBodyParts().isEmpty());
+    assertTrue(parameters.containsKey("boundary"));
+    assertTrue(((FormDataMultiPart) entity).getHeaders().isEmpty());
+    assertTrue(((FormDataMultiPart) entity).getParameterizedHeaders().isEmpty());
+    assertTrue(((FormDataMultiPart) entity).getFields().isEmpty());
+    assertSame(mediaType, actualSerializeResult.getVariant().getMediaType());
+  }
+
+  /**
+   * Test {@link ApiClientJersey2#serialize(Object, Map, String)}.
+   *
+   * <ul>
+   *   <li>When {@code text/plain}.
+   *   <li>Then return Entity is {@code Obj}.
+   * </ul>
+   *
+   * <p>Method under test: {@link ApiClientJersey2#serialize(Object, Map, String)}
+   */
+  @Test
+  @DisplayName(
+      "Test serialize(Object, Map, String); when 'text/plain'; then return Entity is 'Obj'")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({"Entity ApiClientJersey2.serialize(Object, Map, String)"})
+  void testSerialize_whenTextPlain_thenReturnEntityIsObj() {
+    // Arrange
+    HashMap<String, String> defaultHeaders = new HashMap<>();
+    defaultHeaders.put("Delivered-To", "alice.liddell@example.org");
+    ApiClientJersey2 apiClientJersey2 =
+        new ApiClientJersey2(
+            mock(Client.class),
+            "https://example.org/example",
+            defaultHeaders,
+            "https://example.org/example");
+
+    // Act
+    Entity<?> actualSerializeResult =
+        apiClientJersey2.serialize("Obj", new HashMap<>(), "text/plain");
+
+    // Assert
+    assertEquals("Obj", actualSerializeResult.getEntity());
+    MediaType mediaType = actualSerializeResult.getMediaType();
+    assertEquals("plain", mediaType.getSubtype());
+    assertEquals("text", mediaType.getType());
+    assertSame(mediaType, actualSerializeResult.getVariant().getMediaType());
   }
 
   /**

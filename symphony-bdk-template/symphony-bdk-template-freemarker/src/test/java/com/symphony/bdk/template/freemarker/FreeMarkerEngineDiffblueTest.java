@@ -11,53 +11,6 @@ import org.junit.jupiter.api.Test;
 
 class FreeMarkerEngineDiffblueTest {
   /**
-   * Test {@link FreeMarkerEngine#newTemplateFromFile(String)}.
-   *
-   * <ul>
-   *   <li>When {@code /}.
-   *   <li>Then throw {@link TemplateException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link FreeMarkerEngine#newTemplateFromFile(String)}
-   */
-  @Test
-  @DisplayName("Test newTemplateFromFile(String); when '/'; then throw TemplateException")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromFile(String)"
-  })
-  void testNewTemplateFromFile_whenSlash_thenThrowTemplateException() {
-    // Arrange, Act and Assert
-    assertThrows(TemplateException.class, () -> new FreeMarkerEngine().newTemplateFromFile("/"));
-  }
-
-  /**
-   * Test {@link FreeMarkerEngine#newTemplateFromClasspath(String)}.
-   *
-   * <ul>
-   *   <li>When {@code computerUTF-8}.
-   *   <li>Then throw {@link TemplateException}.
-   * </ul>
-   *
-   * <p>Method under test: {@link FreeMarkerEngine#newTemplateFromClasspath(String)}
-   */
-  @Test
-  @DisplayName(
-      "Test newTemplateFromClasspath(String); when 'computerUTF-8'; then throw TemplateException")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromClasspath(String)"
-  })
-  void testNewTemplateFromClasspath_whenComputerUTF8_thenThrowTemplateException() {
-    // Arrange, Act and Assert
-    assertThrows(
-        TemplateException.class,
-        () -> new FreeMarkerEngine().newTemplateFromClasspath("computerUTF-8"));
-  }
-
-  /**
    * Test {@link FreeMarkerEngine#newTemplateFromClasspath(String)}.
    *
    * <ul>
@@ -152,6 +105,31 @@ class FreeMarkerEngineDiffblueTest {
   }
 
   /**
+   * Test {@link FreeMarkerEngine#newTemplateFromClasspath(String)}.
+   *
+   * <ul>
+   *   <li>When {@code UTF-8UTF-8}.
+   *   <li>Then throw {@link TemplateException}.
+   * </ul>
+   *
+   * <p>Method under test: {@link FreeMarkerEngine#newTemplateFromClasspath(String)}
+   */
+  @Test
+  @DisplayName(
+      "Test newTemplateFromClasspath(String); when 'UTF-8UTF-8'; then throw TemplateException")
+  @Tag("ContributionFromDiffblue")
+  @ManagedByDiffblue
+  @MethodsUnderTest({
+    "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromClasspath(String)"
+  })
+  void testNewTemplateFromClasspath_whenUtf8utf8_thenThrowTemplateException() {
+    // Arrange, Act and Assert
+    assertThrows(
+        TemplateException.class,
+        () -> new FreeMarkerEngine().newTemplateFromClasspath("UTF-8UTF-8"));
+  }
+
+  /**
    * Test {@link FreeMarkerEngine#newTemplateFromString(String)}.
    *
    * <ul>
@@ -196,29 +174,5 @@ class FreeMarkerEngineDiffblueTest {
     // Arrange, Act and Assert
     assertTrue(
         new FreeMarkerEngine().newTemplateFromString("Template") instanceof FreeMarkerTemplate);
-  }
-
-  /**
-   * Test {@link FreeMarkerEngine#newTemplateFromString(String)}.
-   *
-   * <ul>
-   *   <li>When {@code Template/}.
-   *   <li>Then return {@link FreeMarkerTemplate}.
-   * </ul>
-   *
-   * <p>Method under test: {@link FreeMarkerEngine#newTemplateFromString(String)}
-   */
-  @Test
-  @DisplayName(
-      "Test newTemplateFromString(String); when 'Template/'; then return FreeMarkerTemplate")
-  @Tag("ContributionFromDiffblue")
-  @ManagedByDiffblue
-  @MethodsUnderTest({
-    "com.symphony.bdk.template.api.Template FreeMarkerEngine.newTemplateFromString(String)"
-  })
-  void testNewTemplateFromString_whenTemplate_thenReturnFreeMarkerTemplate2() {
-    // Arrange, Act and Assert
-    assertTrue(
-        new FreeMarkerEngine().newTemplateFromString("Template/") instanceof FreeMarkerTemplate);
   }
 }
