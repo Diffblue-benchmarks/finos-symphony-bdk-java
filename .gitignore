@@ -23,3 +23,8 @@ settings.xml
 datafeed.id
 .java-version
 
+.diffblue/cache
+**.diffblue/cache
+**/.diffblue/cache
+**/**.diffblue/cache
+**/**/.diffblue/cache

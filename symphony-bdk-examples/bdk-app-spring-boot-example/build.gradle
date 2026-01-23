@@ -15,6 +15,6 @@ dependencies {
     testImplementation("org.springframework:spring-test:6.1.15")
     testImplementation("org.springframework.boot:spring-boot-test:3.3.6")
     testImplementation("org.hamcrest:hamcrest:3.0")
-    compileOnly("com.diffblue.cover:cover-annotations:1.7.0")
-    testImplementation("com.diffblue.cover:cover-annotations:1.7.0")
+    compileOnly("com.diffblue.cover:cover-annotations:1.9.0")
+    testImplementation("com.diffblue.cover:cover-annotations:1.9.0")
 }
